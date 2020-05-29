@@ -1,3 +1,45 @@
-h1 {
+.fancy-header {
+    text-align: center;
     color: magenta;
+    text-decoration: underline;
+}
+
+body {
+    background-color: gray;
+    background-image: url(../img/cerberus.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+}
+
+ul li{
+    list-style: lower-greek;
+}
+
+table {
+    border-collapse: collapse;
+    color: darkviolet;
+}
+
+table, th, td {
+    border: 1px solid aqua;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+
+
+a:link {
+    color: aqua;
+}
+
+a:hover {
+    color: darkviolet;
+}
+
+a:visited {
+    color: chocolate;
 }
