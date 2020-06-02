@@ -125,9 +125,9 @@ a {
 
 .media {
     width: 100%;
-    background-color: white;
+    background-color: var(--light-bg);
     border-bottom: 1px;
-    border-color: black;
+    border-color: var(--separator-color);
     padding: .5em;
     overflow: auto;
 }
@@ -138,5 +138,15 @@ a {
 }
 
 .media-body{
-    width: 100%;
+    float: right;
+    width: calc(100% - 50px);
+}
+
+.profile-items{
+    list-style: none;
+    padding: 0px;
+}
+
+.profile-entry {
+    margin: .5em;
 }
