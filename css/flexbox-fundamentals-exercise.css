@@ -34,19 +34,32 @@ h2, h3 {
     padding: 1em;
     margin: 0 auto;
     /* enter needed declarations here */
+    /*create declarations to force everything to stay within the white card background*/
+    /*flex-wrap: wrap; this didn't work*/
+    display: flex;
+    flex-direction: column;
+    flex-basis: auto;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 section {
     /* enter needed declarations here */
+    justify-content: space-evenly;
 }
 
 section:nth-of-type(1) {
     height: 3em;
     background: lightgreen;
+    flex-direction: column;
+
+    /*flex-direction: row; this isnt putting green boxes into rows*/
     /* enter needed declarations here */
+
 }
 section:nth-of-type(1) div:last-child {
     /* enter needed declarations here */
+
 }
 
 .purple-box {
@@ -57,6 +70,7 @@ section:nth-of-type(1) div:last-child {
 
 .purple-box:nth-of-type(1) {
     /* enter needed declarations here */
+    /*flex-direction: row; not working either to put purple boxes into rows*/
 }
 
 .purple-box:nth-of-type(2) {
