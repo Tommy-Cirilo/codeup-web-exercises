@@ -12,18 +12,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
     <link rel="stylesheet" href="css/custom.css">
 </head>
-<!--<style>-->
-<!--    .jumbotron {-->
-<!--        background-image: url("img/pizza.png");-->
-<!--    }-->
-
-<!--    .jumbotron h1 {-->
-<!--        opacity: 70%;-->
-<!--    }-->
-<!--</style>-->
 <body>
+<!--this is the navbar-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -39,7 +30,6 @@
             <li class="nav-item bg-light text-white">
                 <a class="nav-link" href="#">Menu</a>
             </li>
-
             <form class="form-inline">
                 <input class="form-control mr-sm-2" type="search" placeholder="Zip Code" aria-label="Search">
                 <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search areas near you</button>
@@ -53,45 +43,43 @@
     </div>
 </nav>
 
-
+<!--this is the background image of a pizza, with a banner of welcome to pizza world-->
 <div class="container1">
     <div class="jumbotron jumbotron-fluid ">
-        <!--        <div class="container">-->
-        <!--            <img src="img/pizza.png">-->
         <h1 class="lead bg-light text-black w-auto p-3 text-center">Welcome to Pizza World!</h1>
-        <!--        </div>-->
     </div>
 </div>
 
-
+<!--this is the section of building your own pizza form-->
 <h2>Build your own pizza!</h2>
+<!--nav tabs with badges-->
+<!--this is the 1st nav tab with badge-->
 <ul class="nav nav-tabs d-flex flex-row bd-highlight mb-3 justify-content-start">
     <li class="nav-item">
         <a class="nav-link" href="#"><span class="badge badge-secondary">1</span>Size and crust</a>
-        <!--first pizza selector main big card-->
-        <div class="card" style="width: 18rem;">
-            <div class="card-header bg-primary text-white">
-                <p>Choose size and crust</p>
-            </div>
-<!--            First Card Selector-->
-            <div class="card" style="width: 18rem;">
-                <div class="card-header">
-                    <p>Hand Tossed</p>
+<!--        This is the main card-->
+        <div class="card">
+            <h5 class="card-header bg-primary text-white">Choose size and crust</h5>
+            <div class="card-body">
+<!--This is the sub card-->
+                <div class="card">
+                    <div class="card-header">
+                        Hand Tossed
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
+                            <label class="btn btn-secondary btn-block btn-light">
+                                <input type="radio" name="options" id="option2"> Small (10")
+                            </label>
+                            <label class="btn btn-secondary btn-block btn-light">
+                                <input type="radio" name="options" id="option3"> Medium (12")
+                            </label>
+                    </ul>
                 </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
-                    <label class="btn btn-secondary btn-block btn-light">
-                        <input type="radio" name="options" id="option2"> Small (10")
-                    </label>
-                    <label class="btn btn-secondary btn-block btn-light">
-                        <input type="radio" name="options" id="option3"> Medium (12")
-                    </label>
-                </ul>
-            </div>
-<!--            Second Card Selector-->
-            <div class="card" style="width: 18rem;">
+<!--This is the second sub card-->
+            <div class="card">
                 <div class="card-header">
-                    <p>Crispy Thin</p>
+                    Crispy Thin
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>
@@ -103,9 +91,13 @@
                     </label>
                 </ul>
             </div>
+<!--            this is the next step button-->
+                <a href="#" class="btn btn-primary">Next Step></a>
+            </div>
         </div>
     </li>
 
+<!--    second nav tab-->
     <li class="nav-item">
         <a class="nav-link" href="#"><span class="badge badge-secondary">2</span>Cheese and Sauce</a>
 <!--        second main card to select cheese and sauce-->
@@ -117,18 +109,109 @@
                     <h5 class="card-header">Cheese</h5>
                     <div class="card-body">
                         <h5 class="card-title">How Much?</h5>
-                        <label class="btn btn-secondary active">
-                            <input type="radio" name="options" id="option1" checked> Active
-                        </label>
-
+<!--                        this is the selector for how much cheese they want-->
+                        <div class="input-group mb-3">
+                            <select class="custom-select" id="inputGroupSelect03" aria-label="Example select with button addon">
+                                <option selected>Choose...</option>
+                                <option value="1">Light</option>
+                                <option value="2">Normal</option>
+                                <option value="3">Extra</option>
+                                <option value="3">Double</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-                <a href="#" class="btn btn-primary">Previous step    Next step</a>
+<!--                this is the selector for sauces-->
+                <div class="card">
+                    <h5 class="card-header">Sauce</h5>
+                    <div class="card-body">
+                        <h5 class="card-title">What Type?</h5>
+                        <!--                        this is the selector for what kind of sauce they want-->
+                        <div class="input-group mb-3">
+                            <select class="custom-select" id="inputGroupSelect03" aria-label="Example select with button addon">
+                                <option selected>Choose...</option>
+                                <option value="1">Tomato sauce</option>
+                                <option value="2">Marinara sauce</option>
+                                <option value="3">BBQ sauce</option>
+                                <option value="3">Alfredo sauce</option>
+                            </select>
+                        </div>
+                    </div>
+                    <hr>
+<!--                    this is the selector for how much sauce they want-->
+                    <div class="card-body">
+                        <h5 class="card-title">How Much?</h5>
+                        <!--                        this is the selector for how much cheese they want-->
+                        <div class="input-group mb-3">
+                            <select class="custom-select" id="inputGroupSelect03" aria-label="Example select with button addon">
+                                <option selected>Choose...</option>
+                                <option value="1">Light</option>
+                                <option value="2">Normal</option>
+                                <option value="3">Extra</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+<!--button group-->
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-primary">Previous Step</button>
+                    <button type="button" class="btn btn-primary">Next Step></button>
+                </div>
             </div>
         </div>
     </li>
+<!--    third tab with badge-->
     <li class="nav-item">
         <a class="nav-link" href="#"><span class="badge badge-secondary">3</span>Toppings</a>
+        <div class="card">
+            <h5 class="card-header bg-primary text-white">Choose Toppings</h5>
+            <div class="card-body">
+                <!--This is the sub card-->
+                <div class="card"">
+                <div class="card-header">
+                    Choose Meats
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
+                    <label class="btn btn-secondary btn-block btn-light">
+                        <input type="checkbox" name="options" id="option2"> Beef
+                    </label>
+                    <label class="btn btn-secondary btn-block btn-light my-0">
+                        <input type="checkbox" name="options" id="option3"> Ham
+                    </label>
+                    <label class="btn btn-secondary btn-block btn-light">
+                        <input type="checkbox" name="options" id="option4"> Philly Steak
+                    </label>
+                    <label class="btn btn-secondary btn-block btn-light my-0">
+                        <input type="checkbox" name="options" id="option5"> Bacon
+                    </label>
+                </ul>
+            </div>
+            <!--This is the second sub card-->
+            <div class="card"">
+            <div class="card-header">
+                Choose Non-Meats
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>
+                <label class="btn btn-secondary btn-block btn-light my-0">
+                    <input type="checkbox" name="options" id="option2"> Green Peppers
+                </label>
+                <label class="btn btn-secondary btn-block btn-light my-1">
+                    <input type="checkbox" name="options" id="option3"> Mushrooms
+                </label>
+                <label class="btn btn-secondary btn-block btn-light my-0">
+                    <input type="checkbox" name="options" id="option4"> Onions
+                </label>
+                <label class="btn btn-secondary btn-block btn-light my-1">
+                    <input type="checkbox" name="options" id="option5"> Jalapeno Peppers
+                </label>
+            </ul>
+        </div>
+        <!--            this is the next step button-->
+        <a href="#" class="btn btn-primary">Next Step></a>
+        </div>
+        </div>
     </li>
 
 </ul>
@@ -142,4 +225,3 @@
         crossorigin="anonymous"></script>
 </body>
 </html>
-
