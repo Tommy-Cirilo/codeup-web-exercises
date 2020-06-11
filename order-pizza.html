@@ -66,15 +66,69 @@
 
 <h2>Build your own pizza!</h2>
 <ul class="nav nav-tabs d-flex flex-row bd-highlight mb-3 justify-content-start">
+    <li class="nav-item">
+        <a class="nav-link" href="#"><span class="badge badge-secondary">1</span>Size and crust</a>
+        <!--first pizza selector main big card-->
+        <div class="card" style="width: 18rem;">
+            <div class="card-header bg-primary text-white">
+                <p>Choose size and crust</p>
+            </div>
+<!--            First Card Selector-->
+            <div class="card" style="width: 18rem;">
+                <div class="card-header">
+                    <p>Hand Tossed</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
+                    <label class="btn btn-secondary btn-block btn-light">
+                        <input type="radio" name="options" id="option2"> Small (10")
+                    </label>
+                    <label class="btn btn-secondary btn-block btn-light">
+                        <input type="radio" name="options" id="option3"> Medium (12")
+                    </label>
+                </ul>
+            </div>
+<!--            Second Card Selector-->
+            <div class="card" style="width: 18rem;">
+                <div class="card-header">
+                    <p>Crispy Thin</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>
+                    <label class="btn btn-secondary btn-block btn-light">
+                        <input type="radio" name="options" id="option2"> Medium (12")
+                    </label>
+                    <label class="btn btn-secondary btn-block btn-light">
+                        <input type="radio" name="options" id="option3"> Large (14")
+                    </label>
+                </ul>
+            </div>
+        </div>
+    </li>
 
     <li class="nav-item">
-        <span class="badge badge-secondary">1</span><a class="nav-link" href="#">Size and crust</a>
+        <a class="nav-link" href="#"><span class="badge badge-secondary">2</span>Cheese and Sauce</a>
+<!--        second main card to select cheese and sauce-->
+        <div class="card">
+            <h5 class="card-header bg-primary text-white">Choose Cheese and Sauce</h5>
+            <div class="card-body">
+<!--                first selector with the second card-->
+                <div class="card">
+                    <h5 class="card-header">Cheese</h5>
+                    <div class="card-body">
+                        <h5 class="card-title">How Much?</h5>
+                        <label class="btn btn-secondary active">
+                            <input type="radio" name="options" id="option1" checked> Active
+                        </label>
+
+                    </div>
+                </div>
+                <a href="#" class="btn btn-primary">Previous step    Next step</a>
+            </div>
+        </div>
     </li>
     <li class="nav-item">
-        <span class="badge badge-secondary">2</span><a class="nav-link" href="#">Cheese and Sauce</a>
-    </li>
-    <li class="nav-item">
-        <span class="badge badge-secondary">3</span><a class="nav-link" href="#">Toppings</a>
+        <a class="nav-link" href="#"><span class="badge badge-secondary">3</span>Toppings</a>
     </li>
 
 </ul>
@@ -88,3 +142,4 @@
         crossorigin="anonymous"></script>
 </body>
 </html>
+
