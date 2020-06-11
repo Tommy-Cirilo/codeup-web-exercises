@@ -1,3 +1,11 @@
 /*.lead {*/
 /*    opacity: 50%;*/
 /*}*/
+
+.jumbotron {
+    background-image: url("../img/pizza.png");
+}
+
+.jumbotron h1 {
+    opacity: 70%;
+}
