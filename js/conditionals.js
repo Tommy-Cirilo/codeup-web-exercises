@@ -4,10 +4,10 @@
 
 /**
  * TODO:
- * Create a function named `analyzeColor` that accepts a string that is a color
- * name as input. This function should return a message that related to that
- * color. Only worry about the colors defined below, if the color passed is not
- * one of the ones defined below, return a message that says so
+ * Create a function named `analyzeColor` that accepts a string that is a color name as input.
+ * This function should return a message that related to that color.
+ * Only worry about the colors defined below, if the color passed is not one of the ones defined below,
+ * return a message that says so
  *
  * Example:
  *  > analyzeColor('blue') // returns "blue is the color of the sky"
@@ -20,6 +20,18 @@
  * console.logging the function's return value
  */
 
+/*let analyzeColor = prompt("please choose a color of the rainbow");
+
+function ac(analyzeColor) {
+   if ("red" , "orange", "yellow", "green", "blue", "indigo", "violet"){
+    return ("yes, " + analyzeColor + " is a color of the rainbow" );
+} else{
+    return ("no, " + analyzeColor + " is not a color of the rainbow");
+}
+}
+ console.log(ac("red"));*/
+
+
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
@@ -27,31 +39,142 @@
 //                  will contain a different color every time the page loads)
 var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 var randomColor = colors[Math.floor(Math.random() * colors.length)];
+
 /**
  * TODO:
  * Pass the `randomColor` variable to your function and console.log the results.
  * You should see a different message every time you refresh the page
  */
+/*
+let analyzeColor = randomColor;
+
+
+switch (analyzeColor) {
+    case "red":
+        alert(analyzeColor + " is the color of power");
+        break;
+    case "orange":
+        alert(analyzeColor + " is the color of fast food hunger");
+        break;
+    case "yellow":
+        alert(analyzeColor + " is the color of happiness");
+        break;
+    case "green":
+        alert(analyzeColor + " is the color of life");
+        break;
+    case "blue":
+        alert(analyzeColor + " is the color of patience");
+        break;
+    case "indigo":
+        alert(analyzeColor + " is the color of virtue");
+        break;
+    case "violet":
+        alert(analyzeColor + " is the color of aggression");
+        break;
+
+    default:
+        alert(analyzeColor + " is not a color of the rainbow, please try again");
+        console.log(analyzeColor + " is not a color of the rainbow, please try again");
+
+}*/
+
+
 
 /**
  * TODO:
  * Refactor your above function to use a switch-case statement
  */
+/*let analyzeColor = randomColor;
 
-/**
- * TODO:
- * Prompt the user for a color when the page loads, and pass the input from the
- * user to your `analyzeColor` function. Alert the return value from your
- * function to show it to the user.
- */
+switch (analyzeColor) {
+    case "red":
+        alert(analyzeColor + " is the color of power");
+        break;
+    case "orange":
+        alert(analyzeColor + " is the color of fast food hunger");
+        break;
+    case "yellow":
+        alert(analyzeColor + " is the color of happiness");
+        break;
+    case "green":
+        alert(analyzeColor + " is the color of life");
+        break;
+    case "blue":
+        alert(analyzeColor + " is the color of patience");
+        break;
+    case "indigo":
+        alert(analyzeColor + " is the color of virtue");
+        break;
+    case "violet":
+        alert(analyzeColor + " is the color of aggression");
+        break;
+
+    default:
+        alert(analyzeColor + " is not a color of the rainbow, please try again");
+        console.log(analyzeColor + " is not a color of the rainbow, please try again");
+
+}*/
+
+
+ // ** TODO:
+ // * Prompt the user for a color when the page loads, and pass the input from the
+ // * user to your `analyzeColor` function. Alert the return value from your
+ // * function to show it to the user.
+ // */
+
+/*let analyzeColor = prompt("Please enter a color of the rainbow");
+
+switch (analyzeColor) {
+    case "red":
+        alert(analyzeColor + " is the color of power");
+        break;
+    case "orange":
+        alert(analyzeColor + " is the color of fast food hunger");
+        break;
+    case "yellow":
+        alert(analyzeColor + " is the color of happiness");
+        break;
+    case "green":
+        alert(analyzeColor + " is the color of life");
+        break;
+    case "blue":
+        alert(analyzeColor + " is the color of patience");
+        break;
+    case "indigo":
+        alert(analyzeColor + " is the color of virtue");
+        break;
+    case "violet":
+        alert(analyzeColor + " is the color of aggression");
+        break;
+
+    default:
+        alert(analyzeColor + " is not a color of the rainbow, please try again");
+        console.log(analyzeColor + " is not a color of the rainbow, please try again");
+
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ########################################################################## */
 
 /**
  * TODO:
  * Suppose there's a promotion in Walmart, each customer is given a randomly
- * generated "lucky number" between 0 and 5. If your lucky number is 0 you have
- * no discount, if your lucky number is 1 you'll get a 10% discount, if it's 2,
+ * generated "lucky number" between 0 and 5.
+ * If your lucky number is 0 you have no discount,
+ * if your lucky number is 1 you'll get a 10% discount, if it's 2,
  * the discount is 25%, if it's 3, 35%, if it's 4, 50%, and if it's 5 you'll get
  * all for free!.
  *
@@ -67,6 +190,55 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * return value.
  */
 
+/*let customerNumber = parseFloat(prompt("What is your lucky number? 0-5"));
+let totalAmount = parseFloat(prompt("please enter your total amount"));
+let discount0 = 0;
+    let discount1 = .10;
+    let discount2 = .25;
+    let discount3 = .35;
+    let discount4 = .50;
+    let discount5 = 1;
+
+
+
+    switch (customerNumber) {
+        case 0:
+            alert("your discounted price is $" + (totalAmount + discount0 ));
+            break;
+
+        case 1:
+            alert("your discounted price is $" + (totalAmount * discount1));
+            break;
+
+        case 2:
+            alert("your discounted price is $" + (totalAmount * discount2));
+            break;
+
+        case 3:
+            alert("your discounted price is $" + (totalAmount * discount3));
+            break;
+
+        case 4:
+            alert("your discounted price is $" + (totalAmount * discount4));
+            break;
+
+        case 5:
+            alert("your discounted price is $" + (totalAmount * discount5));
+            break;
+
+        default:
+            alert("please select the correct Number");
+
+    }*/
+
+
+
+
+
+
+
+
+
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 6.
@@ -75,7 +247,17 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+var luckyNumber = Math.floor(Math.random() * 6);
+
+
+let totalbill = parseFloat(prompt("Please enter the amount of your total bill"));
+
+
+
+
+
+
+
 
 /**
  * TODO:
