@@ -45,8 +45,7 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Pass the `randomColor` variable to your function and console.log the results.
  * You should see a different message every time you refresh the page
  */
-/*
-let analyzeColor = randomColor;
+/*let analyzeColor = randomColor;
 
 
 switch (analyzeColor) {
@@ -122,7 +121,7 @@ switch (analyzeColor) {
  // * function to show it to the user.
  // */
 
-/*let analyzeColor = prompt("Please enter a color of the rainbow");
+let analyzeColor = prompt("Please enter a color of the rainbow");
 
 switch (analyzeColor) {
     case "red":
@@ -151,19 +150,7 @@ switch (analyzeColor) {
         alert(analyzeColor + " is not a color of the rainbow, please try again");
         console.log(analyzeColor + " is not a color of the rainbow, please try again");
 
-}*/
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 
@@ -190,7 +177,7 @@ switch (analyzeColor) {
  * return value.
  */
 
-/*let customerNumber = parseFloat(prompt("What is your lucky number? 0-5"));
+let customerNumber = parseFloat(prompt("What is your lucky number? 0-5"));
 let totalAmount = parseFloat(prompt("please enter your total amount"));
 let discount0 = 0;
     let discount1 = .10;
@@ -229,14 +216,7 @@ let discount0 = 0;
         default:
             alert("please select the correct Number");
 
-    }*/
-
-
-
-
-
-
-
+    }
 
 
 /**
@@ -246,19 +226,19 @@ let discount0 = 0;
  * and alerts to display to the user what their lucky number was, what their
  * price before the discount was, and what their price after the discount is.
  */
+
 // Generate a random number between 0 and 6
-var luckyNumber = Math.floor(Math.random() * 6);
-
-
-let totalbill = parseFloat(prompt("Please enter the amount of your total bill"));
+// var luckyNumber = Math.floor(Math.random() * 6);
+/*let totalbill = parseFloat(prompt("Please enter the amount of your total bill"));
 
 
  function calculateTotal (totalbill) {
      switch (luckyNumber) {
          case 0:
+             alert("Your lucky number is: " + luckyNumber + "")
 
      }
- }
+ }*/
 
 
 
@@ -280,3 +260,8 @@ let totalbill = parseFloat(prompt("Please enter the amount of your total bill"))
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+
+
+//question, how to wrap a switch board into a function, and then call the function.
+
