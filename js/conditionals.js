@@ -253,7 +253,12 @@ var luckyNumber = Math.floor(Math.random() * 6);
 let totalbill = parseFloat(prompt("Please enter the amount of your total bill"));
 
 
+ function calculateTotal (totalbill) {
+     switch (luckyNumber) {
+         case 0:
 
+     }
+ }
 
 
 
