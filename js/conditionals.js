@@ -219,6 +219,8 @@ let discount0 = 0;
     }
 
 
+
+
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 6.
@@ -260,6 +262,19 @@ let discount0 = 0;
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+let confirmNumberInput = confirm ("would you like to enter a number");
+if (confirmNumberInput === true) {
+    let confirmNumberInput =+ prompt("enter a number");
+    confirmNumberInput % 2 === 0 ? alert("you entered a even number") : alert("you entered a odd  number");
+    confirmNumberInput >= 0 ? alert("entered a positive") : alert("you entered a negative");
+    alert("the number you entered plus 100 is equal" + (confirmNumberInput + 100));
+} else {
+    alert("you chose not to participate");
+}
+
+
+
 
 
 
