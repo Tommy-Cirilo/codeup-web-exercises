@@ -1,3 +1,5 @@
+//practice of for loops
+
 function showMultiplicationTable (num){
     return num;
 }
