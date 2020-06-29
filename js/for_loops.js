@@ -44,4 +44,21 @@ for (let i=0; i <10 ; i++) {
 console.log("finished second problem");
 
 
-
+var output="";
+function pyramid(n){
+    for (let i=1; i<10; i++){
+        for (var j=1; j<=i; j++){
+            output += j + "";
+        }
+        console.log(output);
+        output = "";
+    }
+}
+pyramid();
+console.log("Third problem just about done");
+/*var m,n,count = 5;
+for (m = 1; m <= count; m++) {
+    for (n = 1; n <= m; n++) {
+        console.log(""+m+" ");
+    }
+}*/
