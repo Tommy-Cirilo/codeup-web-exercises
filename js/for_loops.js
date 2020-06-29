@@ -19,6 +19,7 @@ let multiply = function(a, b) {
         answer += a;
     }
     return answer;
+
 }
 
 console.log(multiply(4, 5));*/
