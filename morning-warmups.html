@@ -203,12 +203,35 @@
 
 
         alert(magicBall(luckyNumber));*/
-
-
-
-
-
-
+let lights = "on";
+let lightswitch = function () {
+    if (lights === "on") {
+        lights = "off";
+    } else {
+        lights = "on";
+    }
+}
+console.log("lights are " + lights);
+lightswitch();
+console.log("lights are now " + lights);
+// function lightswitch(light) {
+//     if (light === true){
+//         return light;
+//     }
+//     else {
+//         return false;
+//     }
+//     switch (light) {
+//         case true:
+//             return light;
+//             break;
+//         case false:
+//             return false;
+//             break;
+//         default:
+//             return false;
+//     }
+// }
         </script>
     </body>
 </html>
