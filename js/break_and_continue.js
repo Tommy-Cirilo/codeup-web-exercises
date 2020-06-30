@@ -38,11 +38,31 @@ Here is an odd number: 49*/
 
 let oddnumber;
 
-oddnumber = prompt("please enter an odd number between 1 and 50");
+while (true) {
+    oddnumber = prompt("please enter an odd number between 1 and 50");
+    oddnumber = parseInt(oddnumber);
+    if (oddnumber % 2 !== 0 && oddnumber >= 1 && oddnumber < 50) {
+        break;
+    }
+    console.log(oddnumber);
+}
 
-console.log(oddnumber);
+console.log("Number to skip is: " + oddnumber);
+for (let i=1; i<50; i+=2) {
+    if (i === oddnumber) {
+        console.log("skipping number" + oddnumber)
+        continue;
+    }
+    console.log("here is an odd number: " + i);
+    /*else {
+        console.log("skipping number " + oddnumber);
+    }*/
+}
 
 
+
+
+// alert("finished problem 5");
 /*var oddnumber;
 
 
