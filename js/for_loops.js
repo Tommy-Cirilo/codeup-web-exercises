@@ -5,10 +5,17 @@ for that number (just multiply by the numbers 1 through 10)*/
 
 let num = 0;
 
-while (num <= 10) {
+let showMultiplicationTable = function (num){
+    for (let i=1; i<=10; i++){
+        console.log(num + " x " + i + " = " + (i * num));
+    }
+}
+
+showMultiplicationTable(5);
+/*while (num <= 10) {
     num ++;
     console.log("7 x " + num + " is " + (7 * num));
-}
+}*/
 console.log("finished first problem");
 
 //alternate instructor solution
@@ -57,14 +64,16 @@ console.log("finished second problem");
 88888888
 999999999*/
 
-/*var output="";
-    for (let i=1; i<10; i++){
-        for (var j=1; j<=i; j++){
-            output += j + "";
-        }
-    }
-console.log("Third problem just about done");*/
 
+for (let i=1; i<=9; i++) {
+    let str = "";
+    for(let j=1; j<=i; j++){
+        str += i;
+    }
+    console.log(str);
+}
+
+console.log("Third problem just about done");
 
 
 /*Create a for loop that uses console.log to create the output shown below.

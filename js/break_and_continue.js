@@ -36,18 +36,27 @@ Here is an odd number: 45
 Here is an odd number: 47
 Here is an odd number: 49*/
 
-var oddnumber = parseFloat(prompt("enter an odd number between 1 - 50"));
+let oddnumber;
 
-for (i=1; i<oddnumber; i+=2){
-    if(oddnumber !== (%2===0)){
-        console.log("That is not an odd number");
-    }else {
-        console.log("Here is an odd number: " + i);
-        // break;
-        // console.log("Here is your odd number skipped: " + oddnumber);
-        // continue;
+oddnumber = prompt("please enter an odd number between 1 and 50");
+
+console.log(oddnumber);
+
+
+/*var oddnumber;
+
+
+while (true){
+    oddnumber = parseFloat(prompt("enter an odd number between 1 - 50"))
+    if(oddnumber %2!==0 && oddnumber<50 && oddnumber>=1) {
+        console.log("This is an odd number");
+        break;
     }
 }
+console.log(oddnumber);*/
+
+
+
 
 
 // for (i=oddnumber; i<50; i+=2) {
