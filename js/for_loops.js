@@ -44,24 +44,28 @@ for (let i=0; i <10 ; i++) {
 console.log("finished second problem");
 
 
-var output="";
-function pyramid(n){
+/*Create a for loop that uses console.log to create the output shown below.
+
+
+1
+22
+333
+4444
+55555
+666666
+7777777
+88888888
+999999999*/
+
+/*var output="";
     for (let i=1; i<10; i++){
         for (var j=1; j<=i; j++){
             output += j + "";
         }
-        console.log(output);
-        output = "";
     }
-}
-pyramid();
-console.log("Third problem just about done");
-/*var m,n,count = 5;
-for (m = 1; m <= count; m++) {
-    for (n = 1; n <= m; n++) {
-        console.log(""+m+" ");
-    }
-}*/
+console.log("Third problem just about done");*/
+
+
 
 /*Create a for loop that uses console.log to create the output shown below.
 
@@ -87,7 +91,7 @@ for (m = 1; m <= count; m++) {
 10
 5*/
 
-for (let i=100; i>=5; i-5){
+for (let i=100; i>=5; i-=5){
     console.log(i);
 }
 console.log("fourth problem is done");
