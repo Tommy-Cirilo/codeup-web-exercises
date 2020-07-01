@@ -24,7 +24,7 @@
      * Create log statements that will print each of the names individually by
      * accessing each element's index.
      */
-        for (let i=0; i>= names.length; i++ ) {
+        for (let i=0; i < names.length; i++ ) {
             console.log(names[i]);
         }
 
@@ -34,10 +34,19 @@
      * array.
      */
 
+    for (let i=0; i < names.length; i++ ) {
+        console.log(names[i]);
+    }
+
+
     /**
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
+
+
+
+
 
     /**
      * TODO:
