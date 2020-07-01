@@ -7,17 +7,26 @@
      * 'names'.
      */
 
+        let names = ["jack" , "jill", "tom", "dom"];
+
+
+
     /**
      * TODO:
      * Create a log statement that will log the number of elements in the names
      * array.
      */
 
+    console.log(names.length);
+
     /**
      * TODO:
      * Create log statements that will print each of the names individually by
      * accessing each element's index.
      */
+        for (let i=0; i>= names.length; i++ ) {
+            console.log(names[i]);
+        }
 
     /**
      * TODO:
