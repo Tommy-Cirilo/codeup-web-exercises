@@ -17,7 +17,7 @@
      * array.
      */
 
-    console.log(names.length);
+    console.log("the names array has this many elements " + names.length);
 
     /**
      * TODO:
@@ -64,6 +64,7 @@
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 
+
 function first(arr){
     return arr[0];
     }
@@ -73,8 +74,9 @@ function first(arr){
     }
 
     function third(arr) {
-        return arr[2];
+        return arr[arr.length-1];
     }
-
-
+    console.log(first);
+    console.log(second);
+    console.log(third);
 })();
