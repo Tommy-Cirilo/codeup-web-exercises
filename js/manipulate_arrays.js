@@ -47,5 +47,13 @@ console.log(slicedfruit);
 
 
 
+console.log(fruits.reverse());
 
+
+console.log(colors.sort());
+
+
+console.log(fruits.sort());
+
+console.log(fruits.reverse());
 
