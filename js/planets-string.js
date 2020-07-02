@@ -11,9 +11,7 @@
      * console.log planetsArray to check your work
      */
 
-    var planetsArray = planetsString.split();
-
-
+    var planetsArray = planetsString.split("|");
     console.log(planetsArray);
 
 
@@ -25,6 +23,11 @@
      * Create a string with <br> tags between each planet. console.log() your
      * results. Why might this be useful?
      *
+     *
+     *
+     *
+     *
+     *
      * BONUS:
      * Create another string that would display your planets in an undordered
      * list. You will need an opening AND closing <ul> tags around the entire
@@ -34,9 +37,22 @@
 
 
 
-    // var str = planetsArray.join(br);
-    // console.log(planetsArray);
+    var str = planetsArray.join("<br>");
+    console.log(planetsArray);
 
+
+
+
+
+    //bonus
+
+
+    var htmlString = "<ul> <li>";
+
+    htmlString += planetsArray.join("</li> <li>");
+    htmlString += "</li> </ul>";
+
+    console.log(htmlString);
 })();
 
 
