@@ -12,6 +12,15 @@
      *  > console.log(person.lastName) // "Sanchez"
      */
 
+
+    var person = {};
+    person.firstName = "tommy";
+    person.lastName = "cirilo";
+
+
+    console.log(person.firstName);
+    console.log(person.lastName);
+
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -21,6 +30,17 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
+
+    person.sayHello = function () {
+        console.log("Hello from " + person.firstName + " " + person.lastName + "!");
+    };
+
+    person.sayHello();
+    // console.log(person.sayHello());
+
+
+
+
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -42,6 +62,12 @@
     //     {name: 'George', amount: 320}
     // ];
 
+
+
+
+
+
+
     /** TODO:
      * Create an array of objects that represent books and store it in a
      * variable named `books`. Each object should have a title and an author
@@ -54,6 +80,12 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+
+
+
+
+
 
     /**
      * TODO:
@@ -80,6 +112,11 @@
      *      ...
      */
 
+
+
+
+
+
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -90,5 +127,11 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+
+
+
+
+
 
 })();
