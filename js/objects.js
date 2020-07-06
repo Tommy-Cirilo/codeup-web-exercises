@@ -13,9 +13,13 @@
      */
 
 
-    var person = {};
-    person.firstName = "tommy";
-    person.lastName = "cirilo";
+    var person = {
+        firstName: "tommy",
+        lastName: "cirilo"
+        /*sayHello: function () {
+            return "Hello from " +
+        }*/
+    };
 
 
     console.log(person.firstName);
@@ -63,6 +67,9 @@
     ];
 
     var discount = .12;
+
+
+
 
     shoppers.forEach(function(customer) {
         console.log("hello " + customer.name + " your total is: ");
@@ -172,7 +179,34 @@
      *   `showBookInfo` function.
      */
 
-    function createbook(title, author) {
+    const createbook = function (title, authorfirstname, authorlastname) {
+        let book = {};
+        book.title = title;
+        book.author = {};
+        book.author.firstName = authorfirstname;
+        book.author.lastname = authorlastname;
+        return book;
+        // return {title,author:{authorlastname, authorfirstname}};
+    }
+
+
+
+
+    const showbookinfo = function(book, index){
+        console.log("Book # " + books.indexOf(book));
+        console.log("Title: " + book.title);
+        console.log("Author: " + book.author.firstname + " " +  book.author.lastname);
+    };
+
+
+
+
+
+        let books2 = [];
+        books2.push(createbook("Salmon of doubt", "douglas", "adams"));
+
+
+   /* function createbook(title, author) {
         return title + " " + author;
     }
 
@@ -180,6 +214,6 @@ createbook("The raven", "Edgar");
 
 function showbookinfo(bo) {
 
-}
+}*/
 
 })();
