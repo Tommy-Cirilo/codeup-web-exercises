@@ -65,8 +65,13 @@
     var discount = .12;
 
     shoppers.forEach(function(customer) {
-        console.log('Hello ' + shoppers[0].name + ' the total pay is: ' + shoppers[0].amount);
-        console.log('Hello ' + shoppers[1].name + ' the total before your discounted pay is: ' + shoppers[1].amount + " with savings :" + (discount * shoppers[1].amount));
+        console.log("hello " + customer.name + " your total is: ");
+        if (customer.amount > 200){
+            console.log(customer.amount - (customer.amount * discount));
+        } else {
+            console.log(customer.amount);
+        }
+
     });
 
 
