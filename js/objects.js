@@ -89,11 +89,40 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
+    var books = [ {
 
+        title: "The Raven",
+        author:{
+            firstname: 'Edgar',
+            lastname: "Allen Poe"
+        }
+    },
+        {
+            title: "The cask of Amontillado",
+            author:{
+                firstname: 'Henry',
+                lastname: "Poe"
+            }
+        },
+        {
+            title: "The Murder in the Rue Morgue",
+            author:{
+                firstname: 'Rosalie',
+                lastname: "Poe"
+            }
+        },
+        {
+            title: "The Fall of the House of Usher",
+            author:{
+                firstname: 'Elizabeth',
+                lastname: "Poe"
+            }
+        }
+    ];
 
-
-
-
+    console.log(books[0].title);
+    console.log(books[0].author.firstname);
+    console.log(books[0].author.lastname);
 
     /**
      * TODO:
@@ -119,6 +148,13 @@
      *      ---
      *      ...
      */
+
+
+    books.forEach(function (book) {
+        console.log("Book # " + books.indexOf(book));
+        console.log("Title: " + book.title);
+        console.log("Author: " + book.author.firstname + " " +  book.author.lastname);
+    });
 
 
 
