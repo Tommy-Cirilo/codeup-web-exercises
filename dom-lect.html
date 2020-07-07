@@ -8,8 +8,12 @@
 
 
 
-
-
+<form name="login">
+    <div>
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text" value="user">
+    </div>
+</form>
 
 <h1 id="demo"></h1>
 <p class="a">solo</p>
@@ -31,6 +35,16 @@
     for (let i = 0; i < element.length; i++) {
         console.log(element[i].innerHTML);
     }
+
+    var usernameInput = document.forms.login.username;
+    console.log(usernameInput.value);
+
+    function saveUsername() {
+        var usernameInput = document.forms.login.username;
+        console.log(usernameInput.value);
+    }
+
+
 
 
 </script>
