@@ -12,9 +12,20 @@
 
 
 <h1 id="demo"></h1>
+<p class="a"></p>
+<p class="a"></p>
+<p class="b"></p>
+<p class="b"></p>
 <script>
-    var tag = document.getElementById('demo');
-    tag.innerHTML = "Hyperion Rocks"
+    /*var tag = document.getElementById('demo');
+    tag.innerHTML = "Hyperion Rocks"*/
+
+    var bag = document.getElementsByClassName("b");
+
+    for (var i = 0; i < bag.length; i++) {
+        console.log(bag[i].outerHTML);
+    }
+
 </script>
 </body>
 </html>
