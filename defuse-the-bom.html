@@ -14,8 +14,24 @@
     "use strict";
 
     var detonationTimer = 5;
+    var count = 0;
+    var interval = 1000;
+
 
     // TODO: This function needs to be called once every second
+/*    var intervalID = setInterval(function () {
+        if (count >= detonationTimer) {
+            clearInterval(intervalID);
+            alert("Exterminated!");
+        } else {
+            count++;
+            console.log("you have: " + count + " seconds left before detonation.");
+        }
+    }, interval);*/
+
+
+
+
     function updateTimer() {
         if (detonationTimer == 0) {
             alert('EXTERMINATE!');
@@ -23,15 +39,21 @@
         } else if (detonationTimer > 0) {
             document.getElementById('timer').innerHTML = detonationTimer;
         }
-
         detonationTimer--;
     }
 
+    var setIntervalID = setInterval(updateTimer, 1000);
+
+
+
     // TODO: When this function runs, it needs to
     // cancel the interval/timeout for updateTimer()
-    function defuseTheBOM() {
 
+    function defuseTheBOM() {
+        return clearInterval(setIntervalID);
     }
+
+
 
     // Don't modify anything below this line!
     //
