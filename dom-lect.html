@@ -12,10 +12,10 @@
 
 
 <h1 id="demo"></h1>
-<p class="a"></p>
-<p class="a"></p>
-<p class="b"></p>
-<p class="b"></p>
+<p class="a">solo</p>
+<p class="a">yoda</p>
+<p class="b">anakin</p>
+<p class="b">obi</p>
 <script>
     /*var tag = document.getElementById('demo');
     tag.innerHTML = "Hyperion Rocks"*/
@@ -25,6 +25,13 @@
     for (var i = 0; i < bag.length; i++) {
         console.log(bag[i].outerHTML);
     }
+
+
+    var element = document.getElementsByTagName("p");
+    for (let i = 0; i < element.length; i++) {
+        console.log(element[i].innerHTML);
+    }
+
 
 </script>
 </body>
