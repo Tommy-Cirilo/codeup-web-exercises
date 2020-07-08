@@ -15,11 +15,19 @@
     </div>
 </form>
 
-<h1 id="demo"></h1>
+<!--<h1 id="demo"></h1>-->
 <p class="a">solo</p>
 <p class="a">yoda</p>
 <p class="b">anakin</p>
 <p class="b">obi</p>
+
+
+
+<p id="demo1" class="bod">Hot Rod</p>
+<p id="demo2" data-dbfield="field_seven">Hello</p>
+
+
+
 <script>
     /*var tag = document.getElementById('demo');
     tag.innerHTML = "Hyperion Rocks"*/
@@ -45,7 +53,13 @@
     }
 
 
+var demo1 = document.getElementById("demo1");
+    demo1.setAttribute("style", "font-size: 6rem");
 
+
+    var demo2 = document.getElementById("demo2");
+    var dataAttr = demo2.getAttribute("data-dbfield");
+    alert("The database attribute is: " + dataAttr);
 
 </script>
 </body>
