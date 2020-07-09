@@ -25,6 +25,11 @@
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
+<button id="btn1">Click Me!</button>
+<button id="btn2">Remove Event Listener</button>
+<button id="btn3">I Warned you</button>
+<button id="btn4">I bite if you click</button>
+
 <script>
     (function() {
         "use strict";
@@ -43,6 +48,7 @@
         var listItems = document.getElementsByTagName("li");
 
         // TODO: Set text color on every other list item to grey
+        // TODO: Set text color of li with dbid = 1 to blue
 
         for (var i = 0; i<=listItems.length; i++) {
             if (i%2 !==0) {
@@ -55,7 +61,6 @@
             }
         }
 
-        // TODO: Set text color of li with dbid = 1 to blue
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         var subParagraphs = document.getElementsByClassName("sub-paragraph");
 
