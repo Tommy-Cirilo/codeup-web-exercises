@@ -47,15 +47,51 @@
         .addTo(map);
 
 
-/*    geocode("4527 Goldfield, San Antonio, TX 78218", mapBoxKey).then(function(data) {
-        console.log(data);
-        new mapboxgl.Marker().setLngLat(data).addTo(map);
-    });
 
-    reverseGeocode({lat: 51.2194, lng: 4.4025}, mapBoxKey).then(function(data) {
-        console.log(data);
-        document.querySelector("#reverseGeo").innerHTML = data;
-    });*/
+/*
+    //first popup on click
+
+    var aldosPopup = new mapboxgl.Popup()
+        .setLngLat([-98.6244, 29.6481])
+        .setHTML("<strong>Aldos Italiano</strong><p><a href=\"https://www.aldossa.com/\" target=\"_blank\" title=\"Opens in a new                               window\">Aldos Italiano</a> is an authentic italian restaurant that serves some of the best italian food                                  and wines. sun-thu 5-9pm</p>")
+        .addTo(map)
+
+    marker.setPopup(alamoPopup)
+
+    //second popup on click
+
+    var kimsPopup = new mapboxgl.Popup()
+        .setLngLat([-98.4018, 29.4830])
+        .setHTML("<strong>Kims Galbi</strong><p>If you like to eat delicious korean food and liquor, look no further. <a                                   href=\"http://kimsgalbi.com/index.html\" target=\"_blank\" title=\"Opens in a new window\">Kims Galbi delicious                                Korean Food.</a> This is also a great place to have a private karaoke night!</p>")
+        .addTo(map)
+
+    marker.setPopup(kimsPopup)
+
+    //third popup on click
+
+    var thaiPopup = new mapboxgl.Popup()
+        .setLngLat([-98.4413, 29.5771])
+        .setHTML("<strong>Thai Chili</strong><p>Ever wonder what eating in Thailand is like? <a href=\"http://www.thaichili                                  .net/\" target=\"_blank\" title=\"Opens in a new window\">Thai Chili, authentic Thai food</a> two dishes that                                 are worth a try are Phad Thai and the mango with coconut rice</p>")
+        .addTo(map)
+
+    marker.setPopup(thaiPopup)
+
+
+
+    restaurants.forEach(function(restaurant) {         var popupAll = new mapboxgl.Popup()             .setHTML('<h4>' + restaurant.name + '</h4>'+ restaurant.info + "<br>" + restaurant.address);         var marker2 = new mapboxgl.Marker()             .setLngLat([restaurant.lat, restaurant.long])             .setPopup(popupAll)             .addTo(map);     });
+*/
+
+
+
+    /*    geocode("4527 Goldfield, San Antonio, TX 78218", mapBoxKey).then(function(data) {
+            console.log(data);
+            new mapboxgl.Marker().setLngLat(data).addTo(map);
+        });
+
+        reverseGeocode({lat: 51.2194, lng: 4.4025}, mapBoxKey).then(function(data) {
+            console.log(data);
+            document.querySelector("#reverseGeo").innerHTML = data;
+        });*/
 
     //adds the navigation controls
     map.addControl(new mapboxgl.NavigationControl());
