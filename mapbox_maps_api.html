@@ -27,6 +27,16 @@
         zoom: 10,
         center: [-98.4936,29.4241]
     });
+
+    geocode("19179 Blanco Rd #101, San Antonio, TX 78258", mapBoxKey).then(function(data) {
+        console.log(data);
+        new mapboxgl.Marker().setLngLat(data).addTo(map);
+    });
+
+    reverseGeocode({lat: 51.2194, lng: 4.4025}, mapBoxKey).then(function(data) {
+        console.log(data);
+        document.querySelector("#reverseGeo").innerHTML = data;
+    });
 </script>
 </body>
 </html>
