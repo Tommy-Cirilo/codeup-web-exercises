@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+    .pink {
+        background-color: hotpink;
+    }
+
+    .brass {
+        background-color: sandybrown;
+    }
+
+    .red {
+        color: crimson;
+    }
+</style>
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
 
-<h1>Top Secret</h1>
+<h1 class="button" id="ts">Top Secret</h1>
 
 <div class="basic" id="warmUp">
     <p id="new" class="codeup">The following content is for authorized clearances only.</p>
@@ -16,6 +29,7 @@
         <li class="odd">I like to move it move it</li>
         <li class="codeup">You like to, MOVE IT!</li>
     </ul>
+    <button class="button">Click to change the clearance level</button>
 </div>
 
 
@@ -26,21 +40,79 @@
 <script src="js/jquery-3.5.1.min.js"></script>
 
 <script>
+
+    /*The document.ready function is similar to an iffe in Java Script*/
+
+
     $(document).ready(function() {
-        alert( 'The DOM has finished loading!' );
+
+        let pink = ['pink,' , 'hotpink', 'lightpink']
+        $('h1').click(function () {
+            let randomcolor = pink[math.floor(Math.random() * pink.length)];
+            $(this).css("background-color", randomcolor);
+        })
+
+
+        setInterval(function () {
+            let randomcolor = pink[math.floor(Math.random() * pink.length)];
+            $("h1").css("background-color",randomcolor);
+        },2000);
+
+        var contents = $('#warmUp').html();
+        alert(contents);
+
+        var contents2 = $("#new").html();
+        alert(contents2);
+
+        //grabs the class of codeup and changes styling
+
+        $('.codeup').css('border', '1px solid #F00');
+
+        //grabs the li tags and styles them
+        $('li').css('font-size', '20px');
+
+        //grabs multiple tags and styles them
+        $('h1, p, li').css('background-color',  '#F00');
+
+
+        //adds class to all li
+        $('li').addClass('highlighted');
+        alert($('h1').html());
+
+
+        $('.button').click(function () {
+            $(this).css("background-color" , "#0F0");
+        });
+
+        /*$("p").dblclick(function () {
+            $(this).css("font-size","50px");
+        })*/
+
+
+
+
+        $("h1").click(function () {
+            $(this).addClass("pink");
+        });
+
+        $("p").dblclick(function () {
+            $(this).addClass("brass")
+        });
+
+        $("li").hover(function () {
+            $(this).addClass("red");
+        }, function () {
+            $(this).removeClass("red");
+            }
+        );
+
+
+
+
     });
 
 
 
-    var contents = $('#warmUp').html();
-    alert(contents);
-
-    var contents2 = $("#new").html();
-    alert(contents2);
-
-    $('.codeup').css('border', '1px solid #F00');
-    $('li').css('font-size', '20px');
-    $('h1, p, li').css('background-color',  '#F00');
 
 </script>
 </body>
