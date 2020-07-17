@@ -344,13 +344,26 @@ console.log(fibinachi(num));*/
 // fibinachi(2);
 
 
-function divide(num) {
+
+
+/*function divide(num) {
     if (num >= 100){
         return num / 10;
     }
 }
-console.log(200);
+console.log(200);*/
 
+
+function sorting(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        if (typeof arr[i] !== "string") {
+            return null;
+        }
+    }
+    return arr.sort().reverse();
+}
+
+console.log(sorting("a","z","g","i"));
 
 
         </script>
