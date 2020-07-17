@@ -9,12 +9,12 @@
 <h1>Top Secret</h1>
 
 <div class="basic" id="warmUp">
-    <p>The following content is for authorized clearances only.</p>
+    <p id="new" class="codeup">The following content is for authorized clearances only.</p>
     <ul class="basic">
         <li class="odd">I like to move it move it</li>
-        <li>You like to move it move it</li>
+        <li class="codeup">You like to move it move it</li>
         <li class="odd">I like to move it move it</li>
-        <li>You like to, MOVE IT!</li>
+        <li class="codeup">You like to, MOVE IT!</li>
     </ul>
 </div>
 
@@ -30,7 +30,18 @@
         alert( 'The DOM has finished loading!' );
     });
 
-    var contents = $("warmUp")
+
+
+    var contents = $('#warmUp').html();
+    alert(contents);
+
+    var contents2 = $("#new").html();
+    alert(contents2);
+
+    $('.codeup').css('border', '1px solid #F00');
+    $('li').css('font-size', '20px');
+    $('h1, p, li').css('background-color',  '#F00');
+
 </script>
 </body>
 </html>
