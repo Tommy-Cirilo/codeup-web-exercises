@@ -53,13 +53,22 @@
     });
 
     function activateCheats() {
-        document.body.style.backgroundImage = "url('images/cerberus.png')";
 
-        var audio = new Audio('audio/pling.mp3');
+        // document.body.style.backgroundImage = "url('images/cerberus.png')";
+
+        var audio = new Audio('audio/OOT_Navi_Hey1.wav');
         audio.play();
+        setTimeout(function () {
+            var audio1 = new Audio("audio/OOT_Navi_Listen1.wav");
+            audio1.play();
+        }, 1300);
 
         alert("cheats activated");
         }
+
+
+
+
 
 
 
