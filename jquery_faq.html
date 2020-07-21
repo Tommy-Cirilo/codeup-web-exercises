@@ -8,16 +8,20 @@
     .invisible {
         visibility: hidden;
     }
+
+    .highlighter{
+        color: #3B94D9;
+    }
 </style>
 <body>
 
 
 <dl>
     <dt>Where do I Make Reservations to Stay in Yellowstone?</dt>
-    <dd class="invisible">There are nine lodges in the park available, but be sure to make your reservation early!</dd>
+    <dd>There are nine lodges in the park available, but be sure to make your reservation early!</dd>
 
     <dt>How did Yellowstone get it's name?</dt>
-    <dd class="invisible">Yellowstone National Park is named after the Yellowstone River, the major
+    <dd>Yellowstone National Park is named after the Yellowstone River, the major
         river running through the park. According to French-Canadian trappers in the
         1800s, they asked the name of the river from the Minnetaree tribe, who live
         in what is now eastern Montana. They responded “Mi tse a-da-zi,” which
@@ -28,28 +32,28 @@
         formalized the name as “Yellowstone.</dd>
 
     <dt>Can I see Animals?</dt>
-    <dd class="invisible">You can, the visitor's center has a list of recent sightings</dd>
+    <dd>You can, the visitor's center has a list of recent sightings</dd>
 
     <dt>Is YellowStone the largest national park?</dt>
-    <dd class="invisible"></dd>
+    <dd></dd>
 
     <dt></dt>
-    <dd class="invisible"></dd>
+    <dd></dd>
 
     <dt></dt>
-    <dd class="invisible"></dd>
+    <dd></dd>
 
     <dt></dt>
-    <dd class="invisible"></dd>
+    <dd></dd>
 
     <dt></dt>
-    <dd class="invisible"></dd>
+    <dd></dd>
 
     <dt></dt>
-    <dd class="invisible"></dd>
+    <dd></dd>
 
     <dt></dt>
-    <dd class="invisible"></dd>
+    <dd></dd>
 </dl>
 
 
@@ -60,14 +64,13 @@
 "use strict";
 
     $(document).ready(function () {
-
+        $("dd").addClass("invisible");
         $("button").click(function (event) {
-            event.preventDefault();
-            $("")
-        })
-
-
-
+            $("dd").toggleClass("invisible");
+        });
+        $("dt").click(function () {
+            $(this).toggleClass("highlighter");
+        });
     });
 
 
