@@ -56,24 +56,55 @@
     <dd></dd>
 </dl>
 
+<h3 id="national-parks-heading" class="bold">National Parks</h3>
+<ul id="national-parks">
+    <li>Arches</li>
+    <li>Badlands</li>
+    <li>Carlsbad Caverns</li>
+    <li>Denali</li>
+    <li>Everglades</li>
+</ul>
+<h3 class="bold">State Parks of Texas</h3>
+<ul id="state-parks-texas">
+    <li>Abilene</li>
+    <li>Big Bend</li>
+    <li>Choke Canyon</li>
+    <li>Davis Mountains</li>
+    <li>Enchanted Rock</li>
+</ul>
 
-<button>Show FAQ</button>
+<h3 class="bold">Things Found in the Parks</h3>
+<ul id="state-park-stuff">
+    <li>Wolves</li>
+    <li>Road Runners</li>
+    <li>Black Widows</li>
+    <li>Armadillos</li>
+    <li>Rabbits</li>
+    <li>Artifacts</li>
+</ul>
 
+<button id="faq">Show FAQ</button>
+<button id="yellow"></button>
 <script src="js/jquery-3.5.1.min.js"> </script>
 <script>
 "use strict";
 
     $(document).ready(function () {
         $("dd").addClass("invisible");
-        $("button").click(function (event) {
+        $("#faq").click(function (event) {
             $("dd").toggleClass("invisible");
         });
         $("dt").click(function () {
             $(this).toggleClass("highlighter");
         });
+
+        $("#yellow").click(function () {
+            $("li").last();
+        });
+
+
+
     });
-
-
 </script>
 </body>
 </html>
