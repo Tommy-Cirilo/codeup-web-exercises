@@ -12,6 +12,12 @@
     .highlighter{
         color: #3B94D9;
     }
+
+    .enbluemed {
+        color: #373fff;
+    }
+
+
 </style>
 <body>
 
@@ -58,7 +64,7 @@
 
 <h3 id="national-parks-heading" class="bold">National Parks</h3>
 <ul id="national-parks">
-    <li>Arches</li>
+    <li class="enbluemed">Arches</li>
     <li>Badlands</li>
     <li>Carlsbad Caverns</li>
     <li>Denali</li>
@@ -85,6 +91,7 @@
 
 <button id="faq">Show FAQ</button>
 <button id="yellow">Show Last Items</button>
+<button id="bolded">Bold the Good Stuff</button>
 <script src="js/jquery-3.5.1.min.js"> </script>
 <script>
 "use strict";
@@ -98,12 +105,25 @@
             $(this).toggleClass("highlighter");
         });
 
+
         $("#yellow").click(function () {
             $("ul").each(function () {
                 $(this).children().last.css
                 ("backgroundColor", "yellow");
             });
         });
+
+        $("h3").click(function () {
+
+            $(this).next().children().css
+            ("text-decoration","bold");
+        });
+
+        $("li").click(function () {
+            $(this).parent().children().first().toggleClass("enbluemed");
+        })
+
+
     });
 </script>
 </body>
