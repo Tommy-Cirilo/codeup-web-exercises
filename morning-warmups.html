@@ -390,7 +390,16 @@ console.log(sorting("a","z","g","i"));
 
 
 
+function convert(num) {
+    // let feet = inches * 0.083333;
+    if (typeof num === "number") {
+        return Math.floor(num / 12) + "'" + (num % 12) + "\"";
+    }
+    return null;
+}
 
+            console.log(convert(12));
+            console.log(convert(72));
 
         </script>
     </body>
