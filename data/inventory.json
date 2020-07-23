@@ -30,5 +30,13 @@
             "tool"
         ],
         "price": 10
+},
+    {
+        "title": "Weed Eater",
+        "quantity": 5,
+        "categories": [
+            "tool"
+        ],
+        "price": 150
     }
 ]
