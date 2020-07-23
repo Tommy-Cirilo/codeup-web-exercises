@@ -26,16 +26,28 @@
     }
 </style>
 <body>
-<nav>
-    <div class="justify-content-row">
-        <ul class="justify-content-row">
-            <li class="white">Home</li>
-            <li class="white">Catalog</li>
-            <li class="white">About</li>
-            <li class="white">Contact</li>
-        </ul>
+<nav class="nav">
+    <div class="container">
+        <div class="logo">
+            <a href="#">YourLogo</a>
+        </div>
+        <div class="main_list" id="mainListDiv">
+            <ul>
+                <li class="white"><a href="#">Home</a></li>
+                <li class="white"><a href="#">About</a></li>
+                <li class="white"><a href="#">my work</a></li>
+                <li class="white"><a href="#">disegn</a></li>
+                <li class="white"><a href="#">dcontact</a></li>
+            </ul>
+        </div>
+        <div class="media_button">
+            <button class="main_media_button" id="mediaButton">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </div>
-
 </nav>
 <main>
     <section>
@@ -47,7 +59,7 @@
         <br>
         <label for="foods" class="white">Any new foods you would like to talk about?</label>
         <br>
-        <textarea name="suggestion" id="foods" cols="30" rows="10" alt="Please Enter a Delicious Food Suggestion"></textarea>
+        <textarea name="suggestion" id="foods" cols="30" rows="10"></textarea>
         <br>
         <button id="submit" class="">Send a suggestion!</button>
     </section>
