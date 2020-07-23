@@ -3,22 +3,32 @@
 <head>
     <title>Online Store</title>
 </head>
+<style>
+    body {
+        background-color: #848487;
+        align-content: center;
+    }
+    table {
+        border-color: black;
+        background-color: darkred;
+    }
+    th{
+        padding: 1.5em;
+    }
+</style>
 <body>
-
 <h1>My Tool Store</h1>
-
 <table id="products">
     <thead>
         <tr>
-            <th>Title</th>
-            <th>Quantity</th>
-            <th>Price</th>
-            <th>Categories</th>
+            <th id="title">Title</th>
+            <th id="quantity">Quantity</th>
+            <th id="price">Price</th>
+            <th id="cate">Categories</th>
         </tr>
     </thead>
     <tbody id="insertProducts"></tbody>
 </table>
-
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
 <script>
@@ -30,8 +40,14 @@
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
     //             its contents and fields
     //       HINT: You will want to target #insertProducts for your new HTML elements
+
+    $.get("data/inventory.json").done(function (tools) {
+        $.each(tools, function (i, inventory) {
+            $("#products").append("<tr><th>" + inventory.title + "</th><th>" + inventory.quantity + "</th><th>" + inventory.price + "</th><th>" + inventory.categories + "</th></tr>")
+        })
+        // console.log(tools);
+    });
 })();
 </script>
-
 </body>
 </html>
