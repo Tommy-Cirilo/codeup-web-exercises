@@ -9,14 +9,34 @@
 <style>
     body {
         background-image: url("img/italy.jpg");
+        width: 100vw;
+        height: 100vh;
     }
     img {
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
+
+    }
+    nav {
+        background-color: transparent;
+    }
+    .white{
+        color: whitesmoke;
     }
 </style>
 <body>
+<nav>
+    <div class="justify-content-row">
+        <ul class="justify-content-row">
+            <li class="white">Home</li>
+            <li class="white">Catalog</li>
+            <li class="white">About</li>
+            <li class="white">Contact</li>
+        </ul>
+    </div>
 
+</nav>
 <main>
     <section>
 
@@ -25,9 +45,9 @@
     <section>
         <form action=""></form>
         <br>
-        <label for="foods">Any new foods you would like to talk about?</label>
+        <label for="foods" class="white">Any new foods you would like to talk about?</label>
         <br>
-        <textarea name="suggestion" id="foods" cols="30" rows="10">Please Enter a Delicious Food Suggestion</textarea>
+        <textarea name="suggestion" id="foods" cols="30" rows="10" alt="Please Enter a Delicious Food Suggestion"></textarea>
         <br>
         <button id="submit" class="">Send a suggestion!</button>
     </section>
