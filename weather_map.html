@@ -170,18 +170,18 @@
 
     /* Medai qurey section */
 
-    @media screen and (min-width: 768px) and (max-width: 1024px) {
+    /*@media screen and (min-width: 768px) and (max-width: 1024px) {
 
         .container{
             margin: 0;
         }
 
-    }
+    }*/
 
 
 
 
-    @media screen and (max-width:768px) {
+   /* @media screen and (max-width:768px) {
 
         .container{
             margin: 0;
@@ -228,7 +228,7 @@
         .nav div.media_button{
             display: block;
         }
-    }
+    }*/
 
 </style>
 <body>
@@ -258,82 +258,74 @@
 </nav>
 
 <section class="home"></section>
+
 <h1>Weather</h1>
 
-
-
-
-<!--example-->
+<!--First Card-->
 <div class="container">
     <div class="card" style="width: 18rem;">
         <div class="card-header" id="weather-date">
             Today
         </div>
         <ul class="list-group list-group-flush">
-            <li class="list-group-item" id="high-low">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item" id="high-low">High Low Temp</li>
+            <li class="list-group-item" id="weather-condition">Dapibus ac facilisis in</li>
             <li class="list-group-item">Vestibulum at eros</li>
         </ul>
     </div>
 </div>
 
 
-
-
-<!--beginning of weather cards per day-->
-<div class="row row-cols-1 row-cols-md-3">
-    <div class="col mb-4">
-        <div class="card" id="first">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
+<!--second card-->
+<div class="container">
+    <div class="card" style="width: 18rem;">
+        <div class="card-header" id="weather-date-tomorrow">
+            Tomorrow
         </div>
-    </div>
-    <div class="col mb-4">
-        <div class="card">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-        </div>
-    </div>
-    <div class="col mb-4">
-        <div class="card">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-            </div>
-        </div>
-    </div>
-    <div class="col mb-4">
-        <div class="card">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-        </div>
-    </div>
-    <div class="col mb-4">
-        <div class="card">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" >High Low Temp</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
     </div>
 </div>
 
-
-
-
-
-
+<div class="container">
+    <div class="card" style="width: 18rem;">
+        <div class="card-header">
+            Tomorrow
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" id="high-low-tomorrow">High Low Temp</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+    </div>
+</div>
+<div class="container">
+    <div class="card" style="width: 18rem;">
+        <div class="card-header" >
+            Today
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" >High Low Temp</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+    </div>
+</div>
+<div class="container">
+    <div class="card" style="width: 18rem;">
+        <div class="card-header" >
+            Today
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" >High Low Temp</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+    </div>
+</div>
 
 
 
@@ -344,21 +336,47 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 <script src="js/keys.js"></script>
 <script>
-    $.get("http://api.openweathermap.org/data/2.5/weather", {
+    $.get("http://api.openweathermap.org/data/2.5/onecall", {
         APPID: weatherMapKey,
-        q:     "San Antonio, US",
+        lon: -98.49,
+        lat: 29.419,
+        // q:     "San Antonio, US",
         units: "imperial"
     }).done(function (data) {
         console.log(data);
 
-        let date = new Date(data.dt * 1000);
+        //converts unix numbers to actual date
+        let date = new Date(data.daily[0].dt * 1000);
+        // let days = new Date(data.daily * 1000);
+        //for loop for calling days index of i
+
+        // for (let i =0; i <= 5; i++){
+        //     $.each(data, function (i, weather) {
+        //         $("#products").append("<tr><th>" + inventory.title + "</th><th>" + inventory.quantity + "</th><th>" + inventory.price + "</th><th>" + inventory.categories + "</th></tr>")
+        //
+        //
+        //     })
+        // }
+
+
+
+        //displays date in a nice format
         console.log(date.toDateString());
 
 
-        let highTemp = data.main.temp_max;
-        let lowTemp = data.main.temp_min;
+        let highTemp = data.daily[0].temp.max;
+        let lowTemp = data.daily[0].temp.min;
+
+        // replaces html with the id of weather-date, into a nice date string format
         $("#weather-date").html(date.toDateString());
+
+        // replaces html in high-low with low temp and high temp
         $("#high-low").html(lowTemp + "°F / " + highTemp + "°F");
+
+        //tomorrows data for date
+        // $("#weather-date-tomorrow").html(days.toDateString());
+        //
+        // console.log(days.toDateString());
 
     });
 
@@ -367,9 +385,5 @@
 
 
 </script>
-
-
-
-
 </body>
 </html>
