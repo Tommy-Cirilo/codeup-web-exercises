@@ -31,6 +31,7 @@
     </thead>
     <tbody id="insertProducts"></tbody>
 </table>
+<button id="refresh">Update Tool List</button>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
 <script>
@@ -46,9 +47,18 @@
     $.get("data/inventory.json").done(function (tools) {
         $.each(tools, function (i, inventory) {
             $("#products").append("<tr><th>" + inventory.title + "</th><th>" + inventory.quantity + "</th><th>" + inventory.price + "</th><th>" + inventory.categories + "</th></tr>")
+
+
         })
+
         // console.log(tools);
     });
+
+
+
+
+
+
 })();
 </script>
 </body>
