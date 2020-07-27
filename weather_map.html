@@ -9,6 +9,7 @@
     <!--Mapbox API-->
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="weather_map.css">
 </head>
 
 <!--css in style tags-->
@@ -78,7 +79,7 @@
 
 <!--search form-->
 <header>
-    <input type="text" class="search" placeholder="Search for a Location">
+    <input type="text" class="search" placeholder="Search for a Location" id="searching">
 </header>
 
 
@@ -250,6 +251,8 @@
         zoom: 10,
         center: [-98.4936,29.4241]
     });
+
+
 </script>
 </body>
 </html>
