@@ -57,6 +57,13 @@
         opacity: .6;
     }
 
+    .opa{
+        opacity: .6;
+    }
+
+    h1 {
+        text-align: center;
+    }
 
 
 </style>
@@ -74,82 +81,87 @@
 
 
 
-
+<main class="row opa forecast">
 <!--First Card-->
-<div class="container">
+<div class="container col-2 opa">
     <div class="card" style="width: 18rem;">
         <div class="card-header" id="weather-date">
             Today
         </div>
         <ul class="list-group list-group-flush">
             <li class="list-group-item" id="high-low">High Low Temp</li>
-            <li class="list-group-item" id="weather-condition">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Vestibulum at eros</li>
+            <li class="list-group-item" id="feelsLike">Feels Like</li>
+            <li class="list-group-item" id="weather-humidity">Humidity</li>
+            <li class="list-group-item" id="weather-condition">Weather Description</li>
         </ul>
     </div>
 </div>
 
 
 <!--second card-->
-<div class="container">
-    <div class="card" style="width: 18rem;">
-        <div class="card-header" id="weather-date-tomorrow">
-            Tomorrow
+    <div class="container col-2 opa">
+        <div class="card" style="width: 18rem;">
+            <div class="card-header" id="weather-date2">
+                Today
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item" id="high-low2">High Low Temp</li>
+                <li class="list-group-item" id="feelsLike2">Feels Like</li>
+                <li class="list-group-item" id="weather-humidity2">Humidity</li>
+                <li class="list-group-item" id="weather-condition2">Weather Description</li>
+            </ul>
         </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item" >High Low Temp</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-        </ul>
     </div>
-</div>
 
 
 <!--third card-->
-<div class="container">
-    <div class="card" style="width: 18rem;">
-        <div class="card-header">
-            Tomorrow
+    <div class="container col-2 opa">
+        <div class="card" style="width: 18rem;">
+            <div class="card-header" id="weather-date3">
+                Today
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item" id="high-low3">High Low Temp</li>
+                <li class="list-group-item" id="feelsLike3">Feels Like</li>
+                <li class="list-group-item" id="weather-humidity3">Humidity</li>
+                <li class="list-group-item" id="weather-condition3">Weather Description</li>
+            </ul>
         </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item" id="high-low-tomorrow">High Low Temp</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-        </ul>
     </div>
-</div>
 
 <!--fourth card-->
 
-<div class="container">
-    <div class="card" style="width: 18rem;">
-        <div class="card-header" >
-            Today
+    <div class="container col-2 opa">
+        <div class="card" style="width: 18rem;">
+            <div class="card-header" id="weather-date4">
+                Today
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item" id="high-low4">High Low Temp</li>
+                <li class="list-group-item" id="feelsLike4">Feels Like</li>
+                <li class="list-group-item" id="weather-humidity4">Humidity</li>
+                <li class="list-group-item" id="weather-condition4">Weather Description</li>
+            </ul>
         </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item" >High Low Temp</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-        </ul>
     </div>
-</div>
 
 <!--fifth card-->
 
-<div class="container">
-    <div class="card" style="width: 18rem;">
-        <div class="card-header" >
-            Today
+    <div class="container col-2 opa">
+        <div class="card" style="width: 18rem;">
+            <div class="card-header" id="weather-date5">
+                Today
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item" id="high-low5">High Low Temp</li>
+                <li class="list-group-item" id="feelsLike5">Feels Like</li>
+                <li class="list-group-item" id="weather-humidity5">Humidity</li>
+                <li class="list-group-item" id="weather-condition5">Weather Description</li>
+            </ul>
         </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item" >High Low Temp</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-        </ul>
     </div>
-</div>
 
-
+</main>
 
 
 <!--scripts-->
@@ -201,28 +213,61 @@
 
 
 
-        //converts unix numbers to actual date
-        let date = new Date(data.daily[0].dt * 1000);
+/*------------------------------------Variables------------------------------------------*/
+
+     /*   //converts unix numbers to actual date
+        let date = new Date(data.daily[i].dt * 1000);
+
+        //weather description
+        let weatherConditions = data.daily[i].weather[0].description;
+
+        //weather icons
+        let weatherIcon = data.daily[i].weather[0].icon;
+
+        //high and low temps
+        let highTemp = data.daily[i].temp.max;
+        let lowTemp = data.daily[i].temp.min;
+
+        //what it actually feels like
+        let feels = data.daily[i].feels_like.day;
+
+        //weather humidity
+        let humidity = data.daily[i].humidity;*/
 
 
-        //for loop for calling days index of i
 
-        // for (let i =0; i <= 5; i++){
-        //     $.each(data, function (i, weather) {
-        //         $("#products").append("<tr><th>" + inventory.title + "</th><th>" + inventory.quantity + "</th><th>" + inventory.price + "</th><th>" + inventory.categories + "</th></tr>")
-        //
-        //
-        //     })
-        // }
 
+        for (let i =0; i < 5; i++) {
+            console.log(data.daily[i]);
+            $("#weather-date").html(new Date(data.daily[i].dt * 1000));
+            $("#high-low").html("max temp: " + data.daily[i].temp.max + "° / min: " + data.daily[i].temp.min + "°");
+            $("#feelsLike").html("Feels like: " + data.daily[i].feels_like.day + "°");
+            $("#weather-humidity").html("Humidity: " + data.daily[i].humidity + "%");
+            $("#weather-condition").html(data.daily[i].weather[0].description);
+
+
+
+
+        }
+
+        //--------------------- for loop for calling days index of i ------------------------------------
+
+        /*for (let i =0; i <= 5; i++){
+            $.(data, function (i, weather) {
+                $("#forecast").append("<div><div><div>" + weatherConditions + "</div><ul><li>" + highTemp + "° / "
+                    + lowTemp + "°" + "</li><li>" + "feels like: " + feels + "</li><li>" +"Humidity: " + humidity +
+                    "</li><li>" + weatherConditions + "</li></ul></div></div>");
+            })
+        }*/
+
+        console.log(data);
 
 
         //displays date in a nice format
-        console.log(date.toDateString());
+        // console.log(date.toDateString());
 
 
-        let highTemp = data.daily[0].temp.max;
-        let lowTemp = data.daily[0].temp.min;
+
 
         // replaces html with the id of weather-date, into a nice date string format
         $("#weather-date").html(date.toDateString());
@@ -230,6 +275,14 @@
         // replaces html in high-low with low temp and high temp
         $("#high-low").html(lowTemp + "°F / " + highTemp + "°F");
 
+        //replaces html with the weather description
+        $("#weather-condition").html(weatherConditions + weatherIcon);
+
+        //replaces html with feels like temp
+        $("#feelsLike").html("It Feels Like: " + feels);
+
+        //changes humidity
+        $("#weather-humidity").html("Humidity: " + humidity + "%");
 
     });
 
