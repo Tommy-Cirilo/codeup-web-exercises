@@ -5,74 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Weather Map</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
+    <link href="css/weather_map.css" rel="stylesheet">
     <!--Mapbox API-->
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
-    <link rel="stylesheet" href="weather_map.css">
+
 </head>
-
-<!--css in style tags-->
 <style>
-
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        transition: all 0.4s;
-        font-family: -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Helvetica,
-        Arial,
-        sans-serif,
-        "Apple Color Emoji",
-        "Segoe UI Emoji",
-        "Segoe UI Symbol";
-    }
     body {
         background-image: url("img/weather.jpg");
         background-size: cover;
         background-position: top center;
     }
-
-    header{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 50px 15px 15px;
-    }
-    .search {
-        width: 100%;
-        max-width: 280px;
-        padding: 10px 15px;
-        border: none;
-        outline: none;
-        opacity: .5;
-        border-radius: 16px 0px;
-        border-bottom: 7px solid yellow;
-        font-size: 20px;
-        transition: .2s ease-out;
-    }
-
-    head input:focus {
-        background-color: white;
-        opacity: .6;
-    }
-
-    .opa{
-        opacity: .6;
-    }
-
-    h1 {
-        text-align: center;
-    }
-
-
 </style>
 <body>
-
 
 <h1>Weather</h1>
 
@@ -81,7 +27,6 @@
 <header>
     <input type="text" class="search" placeholder="Search for a Location" id="searching">
 </header>
-
 
 
 
@@ -133,8 +78,8 @@
         </div>
     </div>
 
-<!--fourth card-->
 
+<!--fourth card-->
     <div class="container col-2 opa">
         <div class="card" style="width: 18rem;">
             <div class="card-header" id="weather-date3">
@@ -149,8 +94,8 @@
         </div>
     </div>
 
-<!--fifth card-->
 
+<!--fifth card-->
     <div class="container col-2 opa">
         <div class="card" style="width: 18rem;">
             <div class="card-header" id="weather-date4">
@@ -166,12 +111,12 @@
     </div>
 
 
+    <!------------------Map Box----------------->
     <section class="container row w-100">
-        <div class="col-12" id='map' style='width: 400px; height: 300px;'>
-
-        </div>
+        <div class="col-12" id='map' style='width: 400px; height: 300px;'></div>
     </section>
 </main>
+
 
 
 
@@ -180,79 +125,6 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 <script src="js/keys.js"></script>
-
-
-
-
-
-
-<!----------------------Script For Updating Weather Cards----------------------------->
-<script>
-    $.get("http://api.openweathermap.org/data/2.5/onecall", {
-        APPID: weatherMapKey,
-        lon: -98.49,
-        lat: 29.419,
-        // q:     "San Antonio, US",
-        units: "imperial"
-    }).done(function (data) {
-        console.log(data);
-
-/*------------------------------------For loop to update each card------------------------------------------*/
-
-        for (let i =0; i < 5; i++) {
-            console.log(data.daily[i]);
-            /*Card Updates plus the number string + i*/
-            $("#weather-date" + i).html(new Date(data.daily[i].dt * 1000).toDateString());
-            $("#high-low" + i).html("max temp: " + data.daily[i].temp.max + "° / min: " + data.daily[i].temp.min + "°");
-            $("#feelsLike" + i).html("Feels like: " + data.daily[i].feels_like.day + "°");
-            $("#weather-humidity" + i).html("Humidity: " + data.daily[i].humidity + "%");
-            $("#weather-condition" + i).html(data.daily[i].weather[0].description);
-        }
-
-
-
-        //search box functionality
-        /*    function getData (url, cityName, appId, units) {
-                let request = $.ajax({
-                    url: url,
-                    dataType: "jsonp",
-                    data: {q: cityName, appId: appId, units: units},
-                    jsonpCallback: "fetchData",
-                    type: "GET"
-                }).fail(function (error) {
-                    console.error(error)
-                    alert("Some Data has been misplaced...")
-                })
-            }
-
-            function fetchData (forecast) {
-                console.log(forecast);
-                let html = " ",
-                    cityName = forecast.city.name,
-                    country = forecast.city.country
-
-
-                html += "<h3> Weather Forecast for " + cityName + ", " + country + "</h3>"
-
-                forecast.list.forEach(function (forecastEntry, index, list) {
-                    html += "<p>" + forecastEntry.dt_txt + ": " + forecastEntry.main.temp + "</p>"
-                })
-            }*/
-
-        //end of searches
-    });
-</script>
-
-<script>
-    mapboxgl.accessToken = mapBoxKey;
-    var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/dark-v10',
-        zoom: 10,
-        center: [-98.4936,29.4241]
-    });
-
-
-</script>
+<script src="js/weather_map.js"></script>
 </body>
 </html>
