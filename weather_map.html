@@ -48,10 +48,15 @@
         opacity: .5;
         border-radius: 16px 0px;
         border-bottom: 7px solid yellow;
-
-
-
+        font-size: 20px;
+        transition: .2s ease-out;
     }
+
+    head input:focus {
+        background-color: white;
+        opacity: .6;
+    }
+
 
 
 </style>
@@ -162,6 +167,40 @@
     }).done(function (data) {
         console.log(data);
 
+
+        //search box functionality
+    /*    function getData (url, cityName, appId, units) {
+            let request = $.ajax({
+                url: url,
+                dataType: "jsonp",
+                data: {q: cityName, appId: appId, units: units},
+                jsonpCallback: "fetchData",
+                type: "GET"
+            }).fail(function (error) {
+                console.error(error)
+                alert("Some Data has been misplaced...")
+            })
+        }
+
+        function fetchData (forecast) {
+            console.log(forecast);
+            let html = " ",
+                cityName = forecast.city.name,
+                country = forecast.city.country
+
+
+            html += "<h3> Weather Forecast for " + cityName + ", " + country + "</h3>"
+
+            forecast.list.forEach(function (forecastEntry, index, list) {
+                html += "<p>" + forecastEntry.dt_txt + ": " + forecastEntry.main.temp + "</p>"
+            })
+        }*/
+
+        //end of searches
+
+
+
+
         //converts unix numbers to actual date
         let date = new Date(data.daily[0].dt * 1000);
 
@@ -191,10 +230,6 @@
         // replaces html in high-low with low temp and high temp
         $("#high-low").html(lowTemp + "°F / " + highTemp + "°F");
 
-        //tomorrows data for date
-        // $("#weather-date-tomorrow").html(days.toDateString());
-        //
-        // console.log(days.toDateString());
 
     });
 
