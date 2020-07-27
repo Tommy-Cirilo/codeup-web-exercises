@@ -6,6 +6,9 @@
     <title>Weather Map</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
+    <!--Mapbox API-->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
 </head>
 
 <!--css in style tags-->
@@ -161,7 +164,14 @@
         </div>
     </div>
 
+
+    <section class="container row w-100">
+        <div class="col-12" id='map' style='width: 400px; height: 300px;'>
+
+        </div>
+    </section>
 </main>
+
 
 
 <!--scripts-->
@@ -169,6 +179,13 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 <script src="js/keys.js"></script>
+
+
+
+
+
+
+<!----------------------Script For Updating Weather Cards----------------------------->
 <script>
     $.get("http://api.openweathermap.org/data/2.5/onecall", {
         APPID: weatherMapKey,
@@ -179,119 +196,60 @@
     }).done(function (data) {
         console.log(data);
 
-
-        //search box functionality
-    /*    function getData (url, cityName, appId, units) {
-            let request = $.ajax({
-                url: url,
-                dataType: "jsonp",
-                data: {q: cityName, appId: appId, units: units},
-                jsonpCallback: "fetchData",
-                type: "GET"
-            }).fail(function (error) {
-                console.error(error)
-                alert("Some Data has been misplaced...")
-            })
-        }
-
-        function fetchData (forecast) {
-            console.log(forecast);
-            let html = " ",
-                cityName = forecast.city.name,
-                country = forecast.city.country
-
-
-            html += "<h3> Weather Forecast for " + cityName + ", " + country + "</h3>"
-
-            forecast.list.forEach(function (forecastEntry, index, list) {
-                html += "<p>" + forecastEntry.dt_txt + ": " + forecastEntry.main.temp + "</p>"
-            })
-        }*/
-
-        //end of searches
-
-
-
-
-/*------------------------------------Variables------------------------------------------*/
-
-
-        //converts unix numbers to actual date
-        // let date = new Date(data.daily[i].dt * 1000);
-     /*
-
-        //weather description
-        let weatherConditions = data.daily[i].weather[0].description;
-
-        //weather icons
-        let weatherIcon = data.daily[i].weather[0].icon;
-
-        //high and low temps
-        let highTemp = data.daily[i].temp.max;
-        let lowTemp = data.daily[i].temp.min;
-
-        //what it actually feels like
-        let feels = data.daily[i].feels_like.day;
-
-        //weather humidity
-        let humidity = data.daily[i].humidity;*/
-
-
-
+/*------------------------------------For loop to update each card------------------------------------------*/
 
         for (let i =0; i < 5; i++) {
             console.log(data.daily[i]);
-            /*First Card Updates*/
-            $("#weather-date" + i).html(new Date(data.daily[i].dt * 1000));
+            /*Card Updates plus the number string + i*/
+            $("#weather-date" + i).html(new Date(data.daily[i].dt * 1000).toDateString());
             $("#high-low" + i).html("max temp: " + data.daily[i].temp.max + "° / min: " + data.daily[i].temp.min + "°");
             $("#feelsLike" + i).html("Feels like: " + data.daily[i].feels_like.day + "°");
             $("#weather-humidity" + i).html("Humidity: " + data.daily[i].humidity + "%");
             $("#weather-condition" + i).html(data.daily[i].weather[0].description);
-
-
-
         }
 
-        //--------------------- for loop for calling days index of i ------------------------------------
-
-        /*for (let i =0; i <= 5; i++){
-            $.(data, function (i, weather) {
-                $("#forecast").append("<div><div><div>" + weatherConditions + "</div><ul><li>" + highTemp + "° / "
-                    + lowTemp + "°" + "</li><li>" + "feels like: " + feels + "</li><li>" +"Humidity: " + humidity +
-                    "</li><li>" + weatherConditions + "</li></ul></div></div>");
-            })
-        }*/
-
-        console.log(data);
 
 
-        //displays date in a nice format
-        // console.log(date.toDateString());
+        //search box functionality
+        /*    function getData (url, cityName, appId, units) {
+                let request = $.ajax({
+                    url: url,
+                    dataType: "jsonp",
+                    data: {q: cityName, appId: appId, units: units},
+                    jsonpCallback: "fetchData",
+                    type: "GET"
+                }).fail(function (error) {
+                    console.error(error)
+                    alert("Some Data has been misplaced...")
+                })
+            }
+
+            function fetchData (forecast) {
+                console.log(forecast);
+                let html = " ",
+                    cityName = forecast.city.name,
+                    country = forecast.city.country
 
 
+                html += "<h3> Weather Forecast for " + cityName + ", " + country + "</h3>"
 
+                forecast.list.forEach(function (forecastEntry, index, list) {
+                    html += "<p>" + forecastEntry.dt_txt + ": " + forecastEntry.main.temp + "</p>"
+                })
+            }*/
 
-        // replaces html with the id of weather-date, into a nice date string format
-        $("#weather-date").html(date.toDateString());
-
-        // replaces html in high-low with low temp and high temp
-        $("#high-low").html(lowTemp + "°F / " + highTemp + "°F");
-
-        //replaces html with the weather description
-        $("#weather-condition").html(weatherConditions + weatherIcon);
-
-        //replaces html with feels like temp
-        $("#feelsLike").html("It Feels Like: " + feels);
-
-        //changes humidity
-        $("#weather-humidity").html("Humidity: " + humidity + "%");
-
+        //end of searches
     });
+</script>
 
-
-
-
-
+<script>
+    mapboxgl.accessToken = mapBoxKey;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/dark-v10',
+        zoom: 10,
+        center: [-98.4936,29.4241]
+    });
 </script>
 </body>
 </html>
