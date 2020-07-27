@@ -85,20 +85,36 @@
 <!--First Card-->
 <div class="container col-2 opa">
     <div class="card" style="width: 18rem;">
-        <div class="card-header" id="weather-date">
+        <div class="card-header" id="weather-date0">
             Today
         </div>
         <ul class="list-group list-group-flush">
-            <li class="list-group-item" id="high-low">High Low Temp</li>
-            <li class="list-group-item" id="feelsLike">Feels Like</li>
-            <li class="list-group-item" id="weather-humidity">Humidity</li>
-            <li class="list-group-item" id="weather-condition">Weather Description</li>
+            <li class="list-group-item" id="high-low0">High Low Temp</li>
+            <li class="list-group-item" id="feelsLike0">Feels Like</li>
+            <li class="list-group-item" id="weather-humidity0">Humidity</li>
+            <li class="list-group-item" id="weather-condition0">Weather Description</li>
         </ul>
     </div>
 </div>
 
 
 <!--second card-->
+    <div class="container col-2 opa">
+        <div class="card" style="width: 18rem;">
+            <div class="card-header" id="weather-date1">
+                Today
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item" id="high-low1">High Low Temp</li>
+                <li class="list-group-item" id="feelsLike1">Feels Like</li>
+                <li class="list-group-item" id="weather-humidity1">Humidity</li>
+                <li class="list-group-item" id="weather-condition1">Weather Description</li>
+            </ul>
+        </div>
+    </div>
+
+
+<!--third card-->
     <div class="container col-2 opa">
         <div class="card" style="width: 18rem;">
             <div class="card-header" id="weather-date2">
@@ -113,8 +129,8 @@
         </div>
     </div>
 
+<!--fourth card-->
 
-<!--third card-->
     <div class="container col-2 opa">
         <div class="card" style="width: 18rem;">
             <div class="card-header" id="weather-date3">
@@ -129,7 +145,7 @@
         </div>
     </div>
 
-<!--fourth card-->
+<!--fifth card-->
 
     <div class="container col-2 opa">
         <div class="card" style="width: 18rem;">
@@ -141,22 +157,6 @@
                 <li class="list-group-item" id="feelsLike4">Feels Like</li>
                 <li class="list-group-item" id="weather-humidity4">Humidity</li>
                 <li class="list-group-item" id="weather-condition4">Weather Description</li>
-            </ul>
-        </div>
-    </div>
-
-<!--fifth card-->
-
-    <div class="container col-2 opa">
-        <div class="card" style="width: 18rem;">
-            <div class="card-header" id="weather-date5">
-                Today
-            </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item" id="high-low5">High Low Temp</li>
-                <li class="list-group-item" id="feelsLike5">Feels Like</li>
-                <li class="list-group-item" id="weather-humidity5">Humidity</li>
-                <li class="list-group-item" id="weather-condition5">Weather Description</li>
             </ul>
         </div>
     </div>
@@ -215,8 +215,10 @@
 
 /*------------------------------------Variables------------------------------------------*/
 
-     /*   //converts unix numbers to actual date
-        let date = new Date(data.daily[i].dt * 1000);
+
+        //converts unix numbers to actual date
+        // let date = new Date(data.daily[i].dt * 1000);
+     /*
 
         //weather description
         let weatherConditions = data.daily[i].weather[0].description;
@@ -239,12 +241,12 @@
 
         for (let i =0; i < 5; i++) {
             console.log(data.daily[i]);
-            $("#weather-date").html(new Date(data.daily[i].dt * 1000));
-            $("#high-low").html("max temp: " + data.daily[i].temp.max + "° / min: " + data.daily[i].temp.min + "°");
-            $("#feelsLike").html("Feels like: " + data.daily[i].feels_like.day + "°");
-            $("#weather-humidity").html("Humidity: " + data.daily[i].humidity + "%");
-            $("#weather-condition").html(data.daily[i].weather[0].description);
-
+            /*First Card Updates*/
+            $("#weather-date" + i).html(new Date(data.daily[i].dt * 1000));
+            $("#high-low" + i).html("max temp: " + data.daily[i].temp.max + "° / min: " + data.daily[i].temp.min + "°");
+            $("#feelsLike" + i).html("Feels like: " + data.daily[i].feels_like.day + "°");
+            $("#weather-humidity" + i).html("Humidity: " + data.daily[i].humidity + "%");
+            $("#weather-condition" + i).html(data.daily[i].weather[0].description);
 
 
 
