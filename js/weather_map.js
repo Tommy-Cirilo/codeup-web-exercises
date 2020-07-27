@@ -20,6 +20,7 @@ $.get("http://api.openweathermap.org/data/2.5/onecall", {
         $("#feelsLike" + i).html("Feels like: " + data.daily[i].feels_like.day + "°");
         $("#weather-humidity" + i).html("Humidity: " + data.daily[i].humidity + "%");
         $("#weather-condition" + i).html(data.daily[i].weather[0].description);
+        console.log($(data.timezone[0]));
     }
 
 
@@ -67,7 +68,12 @@ var map = new mapboxgl.Map({
 });
 
 
+var geocoder = new MapboxGeocoder({
+    accessToken: mapboxgl.accessToken,
+    mapboxgl: mapboxgl
+});
 
+document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
 
 
 // let city = new mapboxgl.Marker()
