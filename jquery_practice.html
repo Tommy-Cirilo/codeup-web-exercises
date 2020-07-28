@@ -5,13 +5,44 @@
     <title>Test</title>
 </head>
 <body>
+<h1 id="main-heading">Getting a better understanding of Bom and Dom</h1>
+<div id="main-section">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, architecto enim error hic inventore natus omnis quasi saepe. Architecto atque commodi ducimus labore libero porro quas quis vel vitae voluptas?</p>
+    <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi consequuntur dolore earum eligendi eos error explicabo fuga ipsa ipsum iste itaque iure nihil perspiciatis, quidem quod repellat veniam veritatis, voluptas.</span><span>A consectetur deserunt distinctio dolorum eos facere impedit itaque laboriosam laudantium minima molestias nesciunt non, officiis perferendis perspiciatis placeat, porro repellat reprehenderit repudiandae sapiente tempore unde velit. Illum nostrum, quidem.</span></p>
+</div>
 
-<h1>Trying Stuff Out</h1>
 
-
+<ul>
+    <li class="yellow">PHP</li>
+    <li class="yellow">Python</li>
+    <li class="yellow">C#</li>
+    <li class="yellow">Java</li>
+    <li class="yellow">C++</li>
+</ul>
 
 
 <button id="btnToClick">Click Me</button>
+
+
+
+<form name="login">
+    <div>
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text">
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password">
+    </div>
+    <div>
+        <input type="submit">
+    </div>
+</form>
+
+
+
+
+
 
 <script>
     "use strict";
@@ -66,7 +97,49 @@
     // location.reload(true);
 
 
+    /*--------------------DOM--------------------------------*/
 
+    //This is getting element by ID
+    let btnToClick = document.getElementById('btnToClick');
+
+
+    // prints <button id="btnToClick">Click Me</button>
+    console.log(btnToClick);
+
+
+    //get element by class
+    let highlight = document.getElementsByClassName("yellow");
+
+    //get element by tag name
+    let list = document.getElementsByTagName("li")
+
+
+
+    // get the "username" input
+    var usernameInput = document.forms.login.username;
+
+    // log the value of the "username" input
+    console.log(usernameInput.value);
+
+
+
+
+
+
+    // Get the main heading h1 by id
+    var mainHeading = document.getElementById('main-heading');
+
+    console.log(mainHeading.innerHTML); // Prints Hello World!
+
+    // Assign a new value to the inner HTML of the main heading
+    mainHeading.innerHTML = "Hello Codeup!";
+
+    console.log(mainHeading.innerHTML); // Prints Hello Codeup!
+
+    // Get the main section div by id
+    var mainSection = document.getElementById('main-section');
+
+    console.log(mainSection.innerHTML);
 </script>
 </body>
 </html>
