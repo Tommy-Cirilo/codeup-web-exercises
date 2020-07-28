@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+
+<h1>Trying Stuff Out</h1>
+
+
+
+
+<button id="btnToClick">Click Me</button>
+
+<script>
+    "use strict";
+
+    /*-----------------BOM practice----------------*/
+
+
+    /*----------Setting Intervals-------------------*/
+    let count = 0;
+    let max = 10;
+    let interval = 1000;
+
+
+
+    let intervalId = setInterval(function () {
+        if (count >= max) {
+            clearInterval(intervalId);
+            console.log('All done');
+        } else {
+            count++;
+            console.log('Repeating this line ' + count);
+        }
+    }, interval);
+
+
+    /*--------------Setting time outs --------------*/
+
+    let delay = 5000; // delay time in milliseconds
+
+    let timeoutId = setTimeout(function () {
+        alert('Here is a delayed hello!');
+    }, delay);
+
+    // to cancel the timeout, you can call
+    // clearTimeout(timeoutId);
+    // prior to the delay expiring
+
+
+
+
+    // redirect browser to google.com using window.location method
+
+    // window.location = 'http://www.google.com';
+
+
+
+
+    // reload page, possibly from cache
+    // location.reload();
+
+    // reload page from server
+    // location.reload(true);
+
+
+
+</script>
+</body>
+</html>
