@@ -1,17 +1,31 @@
 
-<!----------------------Updating Weather Cards----------------------------->
+let inputlong = 75;
+let inputlat = 75;
 
-$.get("http://api.openweathermap.org/data/2.5/onecall", {
-    APPID: weatherMapKey,
-    lon: -98.49,
-    lat: 29.419,
-    // q:     "San Antonio, US",
-    units: "imperial"
-}).done(function (data) {
-    console.log(data);
 
-    /*------------------------------------For loop to update each card------------------------------------------*/
 
+mapboxgl.accessToken = mapBoxKey;
+let map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/dark-v10',
+    zoom: 10,
+    center: [inputlong,inputlat]
+});
+
+
+/*-------------geocoder search bar ---------------*/
+
+let geocoder = new MapboxGeocoder({
+    accessToken: mapboxgl.accessToken,
+    placeholder: "Want to check the weather somewhere?",
+    // marker: false,
+    mapboxgl: mapboxgl
+});
+
+/*------------------------------------For loop to update each card------------------------------------------*/
+// using the data from the other function parameter
+
+let updatecard = function(data){
     for (let i =0; i < 5; i++) {
         console.log(data.daily[i]);
         /*Card Updates plus the number string + i*/
@@ -20,67 +34,80 @@ $.get("http://api.openweathermap.org/data/2.5/onecall", {
         $("#feelsLike" + i).html("Feels like: " + data.daily[i].feels_like.day + "°");
         $("#weather-humidity" + i).html("Humidity: " + data.daily[i].humidity + "%");
         $("#weather-condition" + i).html(data.daily[i].weather[0].description);
-        console.log($(data.timezone[0]));
+
+
+
     }
+}
 
 
 
-    //search box functionality
-    /*    function getData (url, cityName, appId, units) {
-            let request = $.ajax({
-                url: url,
-                dataType: "jsonp",
-                data: {q: cityName, appId: appId, units: units},
-                jsonpCallback: "fetchData",
-                type: "GET"
-            }).fail(function (error) {
-                console.error(error)
-                alert("Some Data has been misplaced...")
-            })
-        }
+<!----------------------Updating Weather Cards----------------------------->
+//grabbing data as a function parameter
 
-        function fetchData (forecast) {
-            console.log(forecast);
-            let html = " ",
-                cityName = forecast.city.name,
-                country = forecast.city.country
+let forecast = function (lon, lat){
 
+    $.get("http://api.openweathermap.org/data/2.5/onecall", {
+        APPID: weatherMapKey,
+        lon: lon,
+        lat: lat,
+        // q:     "San Antonio, US",
+        units: "imperial"
+    }).done(function (data) {
+        console.log(data);
 
-            html += "<h3> Weather Forecast for " + cityName + ", " + country + "</h3>"
+        //updates cards
+    updatecard(data);
 
-            forecast.list.forEach(function (forecastEntry, index, list) {
-                html += "<p>" + forecastEntry.dt_txt + ": " + forecastEntry.main.temp + "</p>"
-            })
-        }*/
+    });
+}
 
-    //end of searches
-});
-
-
+forecast(inputlong, inputlat);
 /*--------------Map Box Functionality------------------*/
-
-mapboxgl.accessToken = mapBoxKey;
-var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/dark-v10',
-    zoom: 10,
-    center: [-98.4936,29.4241]
-});
-
-
-var geocoder = new MapboxGeocoder({
-    accessToken: mapboxgl.accessToken,
-    mapboxgl: mapboxgl
-});
 
 document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
 
+// Adds navigation controls
+map.addControl(new mapboxgl.NavigationControl());
 
-// let city = new mapboxgl.Marker()
-//     .setLngLat([lon, lat])
-//     .addTo(map);
 
-// $("input").keypress(enter, function () {
-//     if (input == data.timezone)
-// })
+
+// converting input from geocoder
+
+geocoder.on("result", function (location) {
+    console.log(location);
+    inputlong= location.result.center[0];
+    inputlat=location.result.center[1];
+    forecast(inputlong,inputlat);
+})
+
+
+
+
+
+
+
+
+
+
+
+
+  /*  let marker = new mapboxgl.Marker({
+        draggable: true
+    })
+        .setLngLat([inputlong, inputlat])
+        .addTo(map);
+
+    marker.on("dragend", function (updatelocation) {
+        let lnglat = updatelocation.target._lnglat;
+        inputlong = lnglat.lng;
+        inputLat = lnglat.lat;
+    })*/
+
+
+
+
+
+
+
 
