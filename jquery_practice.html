@@ -5,6 +5,7 @@
     <title>Test</title>
 </head>
 <body>
+<!--
 <h1 id="main-heading">Getting a better understanding of Bom and Dom</h1>
 <div id="main-section">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, architecto enim error hic inventore natus omnis quasi saepe. Architecto atque commodi ducimus labore libero porro quas quis vel vitae voluptas?</p>
@@ -38,19 +39,92 @@
         <input type="submit">
     </div>
 </form>
+<a href="http://www.yahoo.com" id="search-link">Web Search</a>
+-->
 
 
+<div class="container">
+    <div id="main">
+        <input type="text" id="input">
+        <button id="add-to-list">Add to List</button>
 
+        <h4>Favorite Food:</h4>
+        <ul id="favorite-food">
+            <li>Ramen</li>
+            <li>Sushi</li>
+            <li>Curry</li>
+        </ul>
 
+        <h4 id="change-me">Change Me</h4>
 
+        <h4>My Cohort: <span id="my-cohort"></span></h4>
+        <input type="text" id="cohort-name">
+        <button id="change-cohort">Update</button>
 
+        <br>
+        <button id="highlight">Highlight</button>
+    </div>
+</div>
+
+<script src="js/jquery-3.5.1.js"></script>
 <script>
-    "use strict";
+$("#change-me").dblclick(function (e) {
+    $(this).css({
+    "background-color": "purple"
+    })
+})
 
-    /*-----------------BOM practice----------------*/
+
+$("#highlight").dblclick(function (e) {
+    $("#my-cohort").css({
+        "background-color": "yellow"
+    })
+})
 
 
-    /*----------Setting Intervals-------------------*/
+let count = 0;
+let max = 3;
+let interval = 1000;
+
+let intervalId = setInterval(function () {
+    if (count >= max) {
+        clearInterval(intervalId);
+        $(".container").css({
+            "background-color": "pink"
+        })
+    } else {
+        count++;
+        console.log('Repeating this line ' + count);
+    }
+}, interval);
+
+// let inputVal = $("#input").value;
+
+
+
+/*--------appends new items into the list ----------*/
+
+$("#add-to-list").click(function () {
+    let newlist = $("#input").val();
+    $("#favorite-food").append("<li>" + newlist + "</li>");
+})
+
+
+$("change-cohort").click(function () {
+    let newcohort = $("cohort-name").val();
+    $("#my-cohort").append("<span>" + newcohort + "</span>");
+})
+
+
+
+
+
+ /*   "use strict";
+
+    /!*-----------------BOM practice----------------*!/
+
+
+    /!*----------Setting Intervals-------------------*!/
     let count = 0;
     let max = 10;
     let interval = 1000;
@@ -68,7 +142,7 @@
     }, interval);
 
 
-    /*--------------Setting time outs --------------*/
+    /!*--------------Setting time outs --------------*!/
 
     let delay = 5000; // delay time in milliseconds
 
@@ -97,7 +171,7 @@
     // location.reload(true);
 
 
-    /*--------------------DOM--------------------------------*/
+    /!*--------------------DOM--------------------------------*!/
 
     //This is getting element by ID
     let btnToClick = document.getElementById('btnToClick');
@@ -140,6 +214,28 @@
     let mainSection = document.getElementById('main-section');
 
     console.log(mainSection.innerHTML);
+
+
+
+    // Get the search link anchor by id
+    var searchLink = document.getElementById("search-link");
+
+    // Does an element have an attribute?
+    console.log(searchLink.hasAttribute("href")); // Prints true
+    console.log(searchLink.hasAttribute("class")); // Prints false
+
+    // Get an attribute value
+    console.log(searchLink.getAttribute("href")); // Prints "http://www.yahoo.com"
+
+    // Add or modify an attribute
+    searchLink.setAttribute("class", "btn btn-default");
+    // Adds the attribute class and sets it to "btn btn-default"
+
+    searchLink.setAttribute("href", "http://google.com");
+    // Changes the href attribute to "http://google.com"
+
+    // Remove an attribute
+    searchLink.removeAttribute("class"); // Remove the class attribute*/
 </script>
 </body>
 </html>
