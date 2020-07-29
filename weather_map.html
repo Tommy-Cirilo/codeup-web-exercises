@@ -15,8 +15,11 @@
 <style>
     body {
         background-image: url("img/weather.jpg");
-        background-size: cover;
+        background-size: auto;
         background-position: top center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100vw;
     }
 </style>
 <body>
@@ -31,9 +34,10 @@
 
 
 
-<main class="row opa forecast">
+<main class="row opa forecast container">
+    <div class="d-flex flex-row justify-content-between flex-nowrap">
 <!--First Card-->
-<div class="container col-2 opa">
+<div class="container opa">
     <div class="card" style="width: 18rem;">
         <div class="card-header" id="weather-date0">
             Today
@@ -49,7 +53,7 @@
 
 
 <!--second card-->
-    <div class="container col-2 opa">
+    <div class="container justify-content-between opa">
         <div class="card" style="width: 18rem;">
             <div class="card-header" id="weather-date1">
                 Today
@@ -65,7 +69,7 @@
 
 
 <!--third card-->
-    <div class="container col-2 opa">
+    <div class="container justify-content-between opa">
         <div class="card" style="width: 18rem;">
             <div class="card-header" id="weather-date2">
                 Today
@@ -81,7 +85,7 @@
 
 
 <!--fourth card-->
-    <div class="container col-2 opa">
+    <div class="container justify-content-between opa">
         <div class="card" style="width: 18rem;">
             <div class="card-header" id="weather-date3">
                 Today
@@ -97,7 +101,7 @@
 
 
 <!--fifth card-->
-    <div class="container col-2 opa">
+    <div class="container justify-content-between opa">
         <div class="card" style="width: 18rem;">
             <div class="card-header" id="weather-date4">
                 Today
@@ -111,13 +115,15 @@
         </div>
     </div>
 
-
+    </div>
+    <br>
     <!------------------Map Box----------------->
 
-    <section class="container row w-100">
+    <section class="container row w-100 justify-content-center">
         <div id="geocoder" class="geocoders"></div>
         <div class="col-12" id='map' style='width: 400px; height: 300px;'></div>
     </section>
+
 </main>
 
 
