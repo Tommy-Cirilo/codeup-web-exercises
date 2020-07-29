@@ -8,7 +8,7 @@ mapboxgl.accessToken = mapBoxKey;
 let map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/dark-v10',
-    zoom: 10,
+    zoom: 3,
     center: [inputlong,inputlat]
 });
 
@@ -80,34 +80,3 @@ geocoder.on("result", function (location) {
     inputlat=location.result.center[1];
     forecast(inputlong,inputlat);
 })
-
-
-
-
-
-
-
-
-
-
-
-
-  /*  let marker = new mapboxgl.Marker({
-        draggable: true
-    })
-        .setLngLat([inputlong, inputlat])
-        .addTo(map);
-
-    marker.on("dragend", function (updatelocation) {
-        let lnglat = updatelocation.target._lnglat;
-        inputlong = lnglat.lng;
-        inputLat = lnglat.lat;
-    })*/
-
-
-
-
-
-
-
-
