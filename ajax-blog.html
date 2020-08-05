@@ -74,6 +74,7 @@
     (function() {
     "use strict";
 
+    //Obtaining data and appending it into the table
     $.get("data/inventory.json").done(function (content) {
         $.each(content, function (i, messages) {
             $("#products").append("<tr><th>" + inventory.title + "</th><th>" + inventory.quantity + "</th><th>" + inventory.price + "</th><th>" + inventory.categories + "</th></tr>")

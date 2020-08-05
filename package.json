@@ -1,0 +1,19 @@
+{
+  "name": "codeup-web-exercises",
+  "version": "1.0.0",
+  "description": "npm practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tommy-Cirilo/codeup-web-exercises.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tommy-Cirilo/codeup-web-exercises/issues"
+  },
+  "homepage": "https://github.com/Tommy-Cirilo/codeup-web-exercises#readme"
+}
