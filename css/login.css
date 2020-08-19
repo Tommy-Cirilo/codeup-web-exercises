@@ -18,25 +18,21 @@ form {
 }
 
 fieldset {
-    -webkit-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
     /* There must be 1em between the content and the border of this element */
     padding: 1em;
     /* It should have no border */
-    border: none;
-    border-color: lightgrey;
-
+    border: none lightgrey;
     /* Its background should be white */
     background-color: white;
 }
 
 .width-80 {
     /* The element with this class should 80% of the width and it must be centered */
-
     width: 80%;
     margin: 0 auto;
-
     /* Read how to center elements with margin here: http://learnlayout.com/margin-auto.html*/
 }
 
@@ -67,7 +63,6 @@ fieldset {
     border: 1px lightgrey;
     /* The border of this element should be 1px, and its color should be light grey */
     background-color: #0fb784;
-
 }
 
 .form-control {
@@ -77,7 +72,6 @@ fieldset {
     /* It should have a separation of .5em from elements on top of it and below it */
     margin-bottom: .5em;
     margin-top: .5em;
-
     /* You'll need to use the `calc` function to make the width of this element match the width of the button */
     width: calc(100% - 100px);
     width: 100%;
@@ -85,5 +79,3 @@ fieldset {
     /* HINT: Calculate based on the padding of the `.btn` class */
     /* HINT: Examples are available at: https://glitch.com/~input-button-width */
 }
-
-

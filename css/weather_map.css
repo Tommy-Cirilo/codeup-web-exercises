@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -15,14 +15,13 @@
     "Segoe UI Symbol";
 }
 
-
-
-header{
+header {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 50px 15px 15px;
 }
+
 .search {
     width: 100%;
     max-width: 280px;
@@ -41,7 +40,7 @@ head input:focus {
     opacity: .6;
 }
 
-.opa{
+.opa {
     opacity: .6;
 }
 
@@ -49,6 +48,7 @@ h1 {
     text-align: center;
 }
 
+/*This is possible code that may be played around with for the geo coder*/
 /*.geocoders {*/
 /*    position: absolute;*/
 /*    z-index: 1;*/
@@ -57,9 +57,11 @@ h1 {
 /*    margin-left: -25%;*/
 /*    top: 10px;*/
 /*}*/
+
 .mapboxgl-ctrl-geocoder {
     min-width: 100%;
 }
+
 #map {
     margin-left: 10px;
 }
