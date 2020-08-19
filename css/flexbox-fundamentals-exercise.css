@@ -1,4 +1,6 @@
-* {box-sizing: border-box;}
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
@@ -7,7 +9,9 @@ body {
     font-family: Chalkboard, sans-serif;
 }
 
-h1 {text-align: center;}
+h1 {
+    text-align: center;
+}
 
 h2, h3 {
     padding: 0;
@@ -25,7 +29,9 @@ h2, h3 {
     width: 2em;
 }
 
-.border {border: 2px solid black;}
+.border {
+    border: 2px solid black;
+}
 
 .card {
     width: 400px;
@@ -33,36 +39,23 @@ h2, h3 {
     background: white;
     padding: 1em;
     margin: 0 auto;
-    /* enter needed declarations here */
-    /*create declarations to force everything to stay within the white card background*/
-    /*flex-wrap: wrap; this didn't work*/
     display: flex;
     flex-direction: column;
-    /*flex-basis: auto;*/
-    /*flex-wrap: wrap;*/
     justify-content: space-around;
-
-
 }
 
 section {
     display: flex;
-    /* enter needed declarations here */
-    /*justify-content: space-evenly;*/
 }
 
 section:nth-of-type(1) {
     height: 3em;
     background: lightgreen;
-    /*flex-direction: column;*/
-
-    /*flex-direction: row; this isnt putting green boxes into rows*/
-    /* enter needed declarations here */
     justify-content: space-between;
     align-items: center;
 }
+
 section:nth-of-type(1) div:last-child {
-    /* enter needed declarations here */
     align-self: flex-start;
 }
 
@@ -73,13 +66,10 @@ section:nth-of-type(1) div:last-child {
 }
 
 .purple-box:nth-of-type(1) {
-    /* enter needed declarations here */
-    /*flex-direction: row; not working either to put purple boxes into rows*/
     flex-grow: 2;
 }
 
 .purple-box:nth-of-type(2) {
-    /* enter needed declarations here */
     flex-grow: 1;
 }
 
@@ -90,13 +80,10 @@ section:nth-of-type(1) div:last-child {
 }
 
 section:nth-of-type(3) {
-    /* enter needed declarations here */
     align-items: center;
 }
 
 section:nth-of-type(3) h3 {
-    /* enter needed declarations here */
-    /*align-self: center;*/
     flex-grow: 1;
 }
 
@@ -112,8 +99,6 @@ section:nth-of-type(3) h3 {
     height: 5em;
     width: 5em;
     background: brown;
-    /* enter needed declarations here */
-    /*justify-content: space-between;*/
     flex-grow: 1;
 }
 
@@ -122,7 +107,6 @@ section:nth-of-type(3) h3 {
 }
 
 section:nth-of-type(5) {
-    /* enter needed declarations here */
     justify-content: space-evenly;
 }
 
@@ -135,7 +119,6 @@ section:nth-of-type(5) {
 section:nth-of-type(6) {
     background: coral;
     height: 14em;
-    /* enter needed declarations here */
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;

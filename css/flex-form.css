@@ -38,8 +38,6 @@ body {
     /* TODO: Add an automatic margin and a flex container to this selector */
     margin: auto;
     display: flex;
-
-    /*justify-content: space-between;*/
 }
 
 .flex-form > * {
@@ -64,9 +62,5 @@ body {
     /* TODO:
         Add an explicit size for items along the main axis of 15em.
         Read more about Flex Basis: https://java.codeup.com/appendix/further-reading/html-css/flexbox-additional-concepts/#flex-basis */
-    /*display: flex;*/
     flex-basis: 15em;
-    /*align-content: space-evenly;*/
-        /*align-content: 15em;*/
-
 }
