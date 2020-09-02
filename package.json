@@ -4,7 +4,7 @@
   "description": "npm practice",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jasmine"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Tommy-Cirilo/codeup-web-exercises/issues"
   },
-  "homepage": "https://github.com/Tommy-Cirilo/codeup-web-exercises#readme"
+  "homepage": "https://github.com/Tommy-Cirilo/codeup-web-exercises#readme",
+  "devDependencies": {
+    "jasmine": "^3.6.1"
+  }
 }
