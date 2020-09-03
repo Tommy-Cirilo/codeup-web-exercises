@@ -1,9 +1,12 @@
 {
   "spec_dir": "spec",
+  "js_dir": "js",
   "spec_files": [
     "**/*[sS]pec.js"
   ],
   "helpers": [
+    "helpers/**/*.js",
+    "helpers/babel.js",
     "helpers/**/*.js"
   ],
   "stopSpecOnExpectationFailure": false,
