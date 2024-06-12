@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/Tommy-Cirilo/codeup-web-exercises#readme",
   "devDependencies": {
-    "jasmine": "^3.6.1"
+    "jasmine": "^3.99.0"
   }
 }
